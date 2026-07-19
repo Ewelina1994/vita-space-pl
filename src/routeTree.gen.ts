@@ -9,8 +9,38 @@
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
 import { Route as rootRouteImport } from './routes/__root'
+import { Route as TreningPersonalnyRouteImport } from './routes/trening-personalny'
+import { Route as TreningEmsRouteImport } from './routes/trening-ems'
+import { Route as KontaktRouteImport } from './routes/kontakt'
+import { Route as InneUslugiRouteImport } from './routes/inne-uslugi'
+import { Route as CennikRouteImport } from './routes/cennik'
 import { Route as IndexRouteImport } from './routes/index'
 
+const TreningPersonalnyRoute = TreningPersonalnyRouteImport.update({
+  id: '/trening-personalny',
+  path: '/trening-personalny',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const TreningEmsRoute = TreningEmsRouteImport.update({
+  id: '/trening-ems',
+  path: '/trening-ems',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const KontaktRoute = KontaktRouteImport.update({
+  id: '/kontakt',
+  path: '/kontakt',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const InneUslugiRoute = InneUslugiRouteImport.update({
+  id: '/inne-uslugi',
+  path: '/inne-uslugi',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const CennikRoute = CennikRouteImport.update({
+  id: '/cennik',
+  path: '/cennik',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
@@ -19,28 +49,102 @@ const IndexRoute = IndexRouteImport.update({
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/cennik': typeof CennikRoute
+  '/inne-uslugi': typeof InneUslugiRoute
+  '/kontakt': typeof KontaktRoute
+  '/trening-ems': typeof TreningEmsRoute
+  '/trening-personalny': typeof TreningPersonalnyRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/cennik': typeof CennikRoute
+  '/inne-uslugi': typeof InneUslugiRoute
+  '/kontakt': typeof KontaktRoute
+  '/trening-ems': typeof TreningEmsRoute
+  '/trening-personalny': typeof TreningPersonalnyRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/cennik': typeof CennikRoute
+  '/inne-uslugi': typeof InneUslugiRoute
+  '/kontakt': typeof KontaktRoute
+  '/trening-ems': typeof TreningEmsRoute
+  '/trening-personalny': typeof TreningPersonalnyRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/'
+  fullPaths:
+    | '/'
+    | '/cennik'
+    | '/inne-uslugi'
+    | '/kontakt'
+    | '/trening-ems'
+    | '/trening-personalny'
   fileRoutesByTo: FileRoutesByTo
-  to: '/'
-  id: '__root__' | '/'
+  to:
+    | '/'
+    | '/cennik'
+    | '/inne-uslugi'
+    | '/kontakt'
+    | '/trening-ems'
+    | '/trening-personalny'
+  id:
+    | '__root__'
+    | '/'
+    | '/cennik'
+    | '/inne-uslugi'
+    | '/kontakt'
+    | '/trening-ems'
+    | '/trening-personalny'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  CennikRoute: typeof CennikRoute
+  InneUslugiRoute: typeof InneUslugiRoute
+  KontaktRoute: typeof KontaktRoute
+  TreningEmsRoute: typeof TreningEmsRoute
+  TreningPersonalnyRoute: typeof TreningPersonalnyRoute
 }
 
 declare module '@tanstack/react-router' {
   interface FileRoutesByPath {
+    '/trening-personalny': {
+      id: '/trening-personalny'
+      path: '/trening-personalny'
+      fullPath: '/trening-personalny'
+      preLoaderRoute: typeof TreningPersonalnyRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/trening-ems': {
+      id: '/trening-ems'
+      path: '/trening-ems'
+      fullPath: '/trening-ems'
+      preLoaderRoute: typeof TreningEmsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/kontakt': {
+      id: '/kontakt'
+      path: '/kontakt'
+      fullPath: '/kontakt'
+      preLoaderRoute: typeof KontaktRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/inne-uslugi': {
+      id: '/inne-uslugi'
+      path: '/inne-uslugi'
+      fullPath: '/inne-uslugi'
+      preLoaderRoute: typeof InneUslugiRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/cennik': {
+      id: '/cennik'
+      path: '/cennik'
+      fullPath: '/cennik'
+      preLoaderRoute: typeof CennikRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/': {
       id: '/'
       path: '/'
@@ -53,7 +157,22 @@ declare module '@tanstack/react-router' {
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  CennikRoute: CennikRoute,
+  InneUslugiRoute: InneUslugiRoute,
+  KontaktRoute: KontaktRoute,
+  TreningEmsRoute: TreningEmsRoute,
+  TreningPersonalnyRoute: TreningPersonalnyRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
   ._addFileTypes<FileRouteTypes>()
+
+import type { getRouter } from './router.tsx'
+import type { startInstance } from './start.ts'
+declare module '@tanstack/react-start' {
+  interface Register {
+    ssr: true
+    router: Awaited<ReturnType<typeof getRouter>>
+    config: Awaited<ReturnType<typeof startInstance.getOptions>>
+  }
+}
