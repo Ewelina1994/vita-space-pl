@@ -128,8 +128,8 @@ function Kontakt() {
         <div className="rounded-2xl overflow-hidden border border-border h-[450px]">
           <iframe
             title="Mapa Vita Space"
-            src="https://www.google.com/maps?q=Warszawa&output=embed"
-            className="w-full h-full grayscale contrast-125 opacity-90"
+            src="https://www.google.com/maps?q=Wieruszów+ul.+Wrocławska+12/1&output=embed"
+            className="w-full h-full contrast-125 opacity-90"
             loading="lazy"
             referrerPolicy="no-referrer-when-downgrade"
           />

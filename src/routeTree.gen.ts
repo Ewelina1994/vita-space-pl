@@ -9,31 +9,16 @@
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
 import { Route as rootRouteImport } from './routes/__root'
-import { Route as TreningPersonalnyRouteImport } from './routes/trening-personalny'
-import { Route as TreningEmsRouteImport } from './routes/trening-ems'
-import { Route as KontaktRouteImport } from './routes/kontakt'
-import { Route as InneUslugiRouteImport } from './routes/inne-uslugi'
-import { Route as CennikRouteImport } from './routes/cennik'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as CennikRouteImport } from './routes/cennik'
+import { Route as InneUslugiRouteImport } from './routes/inne-uslugi'
+import { Route as KontaktRouteImport } from './routes/kontakt'
+import { Route as TreningEmsRouteImport } from './routes/trening-ems'
+import { Route as TreningPersonalnyRouteImport } from './routes/trening-personalny'
 
-const TreningPersonalnyRoute = TreningPersonalnyRouteImport.update({
-  id: '/trening-personalny',
-  path: '/trening-personalny',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const TreningEmsRoute = TreningEmsRouteImport.update({
-  id: '/trening-ems',
-  path: '/trening-ems',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const KontaktRoute = KontaktRouteImport.update({
-  id: '/kontakt',
-  path: '/kontakt',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const InneUslugiRoute = InneUslugiRouteImport.update({
-  id: '/inne-uslugi',
-  path: '/inne-uslugi',
+const IndexRoute = IndexRouteImport.update({
+  id: '/',
+  path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
 const CennikRoute = CennikRouteImport.update({
@@ -41,9 +26,24 @@ const CennikRoute = CennikRouteImport.update({
   path: '/cennik',
   getParentRoute: () => rootRouteImport,
 } as any)
-const IndexRoute = IndexRouteImport.update({
-  id: '/',
-  path: '/',
+const InneUslugiRoute = InneUslugiRouteImport.update({
+  id: '/inne-uslugi',
+  path: '/inne-uslugi',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const KontaktRoute = KontaktRouteImport.update({
+  id: '/kontakt',
+  path: '/kontakt',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const TreningEmsRoute = TreningEmsRouteImport.update({
+  id: '/trening-ems',
+  path: '/trening-ems',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const TreningPersonalnyRoute = TreningPersonalnyRouteImport.update({
+  id: '/trening-personalny',
+  path: '/trening-personalny',
   getParentRoute: () => rootRouteImport,
 } as any)
 
@@ -110,32 +110,11 @@ export interface RootRouteChildren {
 
 declare module '@tanstack/react-router' {
   interface FileRoutesByPath {
-    '/trening-personalny': {
-      id: '/trening-personalny'
-      path: '/trening-personalny'
-      fullPath: '/trening-personalny'
-      preLoaderRoute: typeof TreningPersonalnyRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/trening-ems': {
-      id: '/trening-ems'
-      path: '/trening-ems'
-      fullPath: '/trening-ems'
-      preLoaderRoute: typeof TreningEmsRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/kontakt': {
-      id: '/kontakt'
-      path: '/kontakt'
-      fullPath: '/kontakt'
-      preLoaderRoute: typeof KontaktRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/inne-uslugi': {
-      id: '/inne-uslugi'
-      path: '/inne-uslugi'
-      fullPath: '/inne-uslugi'
-      preLoaderRoute: typeof InneUslugiRouteImport
+    '/': {
+      id: '/'
+      path: '/'
+      fullPath: '/'
+      preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/cennik': {
@@ -145,11 +124,32 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof CennikRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/': {
-      id: '/'
-      path: '/'
-      fullPath: '/'
-      preLoaderRoute: typeof IndexRouteImport
+    '/inne-uslugi': {
+      id: '/inne-uslugi'
+      path: '/inne-uslugi'
+      fullPath: '/inne-uslugi'
+      preLoaderRoute: typeof InneUslugiRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/kontakt': {
+      id: '/kontakt'
+      path: '/kontakt'
+      fullPath: '/kontakt'
+      preLoaderRoute: typeof KontaktRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/trening-ems': {
+      id: '/trening-ems'
+      path: '/trening-ems'
+      fullPath: '/trening-ems'
+      preLoaderRoute: typeof TreningEmsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/trening-personalny': {
+      id: '/trening-personalny'
+      path: '/trening-personalny'
+      fullPath: '/trening-personalny'
+      preLoaderRoute: typeof TreningPersonalnyRouteImport
       parentRoute: typeof rootRouteImport
     }
   }
