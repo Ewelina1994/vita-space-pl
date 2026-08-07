@@ -74,9 +74,10 @@ function Cennik() {
     <SiteLayout>
       <PageHero
         eyebrow="Cennik"
-        title="Przejrzyste pakiety, premium jakość"
+        title="Skuteczny trening w rozsądnej cenie"
         subtitle="Wybierz format i częstotliwość, która odpowiada Twoim celom. Im większy pakiet — tym niższa cena za sesję."
         image={studio}
+        contentClassName="py-16 md:py-10"
       />
 
       {/* EMS INDYWIDUALNY */}
@@ -84,9 +85,15 @@ function Cennik() {
         <PackageGrid
           items={[
             {
-              name: "Sesja pojedyncza/trenign próbny",
+              name: "Trening próbny",
               sessions: "1 trening",
-              price: "100",
+              price: "89",
+              perSession: "89 zł / sesja",
+            },
+            {
+              name: "Pakiet Mini",
+              sessions: "6 treningów",
+              price: "600",
               perSession: "100 zł / sesja",
             },
             {
@@ -98,15 +105,15 @@ function Cennik() {
             {
               name: "Pakiet Progress",
               sessions: "16 treningów",
-              price: "1 360",
-              perSession: "85 zł / sesja",
+              price: "1 440",
+              perSession: "90 zł / sesja",
               featured: true,
             },
             {
-              name: "Pakiet Premium",
+              name: "Pakiet Regular",
               sessions: "24 treningi",
-              price: "1 800",
-              perSession: "75 zł / sesja",
+              price: "2 040",
+              perSession: "85 zł / sesja",
             },
           ]}
         />
@@ -129,27 +136,33 @@ function Cennik() {
               {
                 name: "Sesja pojedyncza",
                 sessions: "1 trening",
-                price: "80",
-                perSession: "80 zł / osoba",
+                price: "75",
+                perSession: "75 zł / osoba",
+              },
+              {
+                name: "Pakiet Mini",
+                sessions: "6 treningów",
+                price: "540",
+                perSession: "90 zł / osoba",
               },
               {
                 name: "Pakiet Start",
                 sessions: "8 treningów",
-                price: "600",
-                perSession: "75 zł / osoba",
+                price: "680",
+                perSession: "85 zł / osoba",
               },
               {
                 name: "Pakiet Progress",
                 sessions: "16 treningów",
-                price: "1 040",
-                perSession: "65 zł / osoba",
+                price: "1 280",
+                perSession: "80 zł / osoba",
                 featured: true,
               },
               {
-                name: "Pakiet Premium",
+                name: "Pakiet Regular",
                 sessions: "24 treningi",
-                price: "1 440",
-                perSession: "60 zł / osoba",
+                price: "1 800",
+                perSession: "75 zł / osoba",
               },
             ]}
           />

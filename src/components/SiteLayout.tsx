@@ -1,6 +1,7 @@
 import { Link } from "@tanstack/react-router";
 import { Phone, Menu, X, MapPin, Mail } from "lucide-react";
 import { useState, type ReactNode } from "react";
+import { cn } from "@/lib/utils";
 
 const nav = [
   { to: "/", label: "Strona główna" },
@@ -145,14 +146,26 @@ export function Section({
   );
 }
 
-export function PageHero({ eyebrow, title, subtitle, image }: { eyebrow: string; title: string; subtitle?: string; image: string }) {
+export function PageHero({
+  eyebrow,
+  title,
+  subtitle,
+  image,
+  contentClassName = "",
+}: {
+  eyebrow: string;
+  title: string;
+  subtitle?: string;
+  image: string;
+  contentClassName?: string;
+}) {
   return (
     <section className="relative min-h-[55vh] flex items-end overflow-hidden">
       <div className="absolute inset-0">
         <img src={image} alt="" className="w-full h-full object-cover" />
         <div className="absolute inset-0 bg-gradient-to-t from-background via-background/85 to-background/50" />
       </div>
-      <div className="relative max-w-7xl mx-auto px-6 py-24 md:py-32 w-full">
+      <div className={cn("relative max-w-7xl mx-auto px-6 py-24 md:py-32 w-full", contentClassName)}>
         <div className="text-xs uppercase tracking-[0.35em] text-gold mb-4">{eyebrow}</div>
         <h1 className="text-5xl md:text-7xl leading-[1.05] max-w-4xl">{title}</h1>
         {subtitle && <p className="mt-6 max-w-2xl text-lg text-muted-foreground">{subtitle}</p>}
