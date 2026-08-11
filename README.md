@@ -4,4 +4,4 @@ npm install
 npm run build
 
 The page can be viewed at:
-https://vita-space-pl.vercel.app/kontakt
+https://vita-space-pl
