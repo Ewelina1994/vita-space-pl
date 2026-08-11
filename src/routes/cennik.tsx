@@ -178,20 +178,20 @@ function Cennik() {
               Pełna uwaga trenera, maksymalna intensywność.
             </p>
             <div className="mt-4">
-              <PriceRow name="Sesja pojedyncza" price="120" />
-              <PriceRow name="Pakiet 8 treningów" price="880" note="110 zł / sesja" />
-              <PriceRow name="Pakiet 16 treningów" price="1 600" note="100 zł / sesja" />
-              <PriceRow name="Pakiet 24 treningi" price="2 160" note="90 zł / sesja" />
+              <PriceRow name="Sesja pojedyncza" price="100" />
+              <PriceRow name="Pakiet 8 treningów" price="720" note="90 zł / sesja" />
+              <PriceRow name="Pakiet 16 treningów" price="1 280" note="80 zł / sesja" />
+              <PriceRow name="Pakiet 24 treningi" price="1 680" note="70 zł / sesja" />
             </div>
           </div>
           <div className="rounded-2xl border border-border bg-card p-8">
             <h3 className="text-2xl mb-2">W parach</h3>
             <p className="text-sm text-muted-foreground mb-2">Cena za osobę.</p>
             <div className="mt-4">
-              <PriceRow name="Sesja pojedyncza" price="80" note="za osobę" />
-              <PriceRow name="Pakiet 8 treningów" price="600" note="75 zł / sesja / osoba" />
-              <PriceRow name="Pakiet 16 treningów" price="1 040" note="65 zł / sesja / osoba" />
-              <PriceRow name="Pakiet 24 treningi" price="1 440" note="60 zł / sesja / osoba" />
+              <PriceRow name="Sesja pojedyncza" price="70" note="za osobę" />
+              <PriceRow name="Pakiet 8 treningów" price="520" note="65 zł / sesja / osoba" />
+              <PriceRow name="Pakiet 16 treningów" price="880" note="55 zł / sesja / osoba" />
+              <PriceRow name="Pakiet 24 treningi" price="1 200" note="50 zł / sesja / osoba" />
             </div>
           </div>
         </div>
@@ -247,17 +247,35 @@ function Cennik() {
       <Section eyebrow="Body Shaping" title="Zabiegi modelujące sylwetkę">
         <div className="grid lg:grid-cols-2 gap-6">
           <div className="rounded-2xl border border-border bg-card p-8">
-            <h3 className="text-xl mb-4">Zabiegi pojedyncze</h3>
-            <PriceRow name="Body Shaping — 1 partia (30 min)" price="150" />
-            <PriceRow name="Body Shaping — 2 partie (60 min)" price="250" />
-            <PriceRow name="Konsultacja i analiza sylwetki" price="0" note="bezpłatnie" />
+            <h3 className="text-xl mb-4">Body Shaping</h3>
+            <PriceRow name="1 zabieg" price="80" note="czas zabiegu: 30 min" />
+            <PriceRow name="5 zabiegów" price="350" />
+            <PriceRow name="10 zabiegów" price="650" />
           </div>
 
           <div className="rounded-2xl border border-border bg-card p-8">
-            <h3 className="text-xl mb-4">Pakiety</h3>
-            <PriceRow name="Pakiet 6 zabiegów (1 partia)" price="840" note="140 zł / zabieg" />
-            <PriceRow name="Pakiet 6 zabiegów (2 partie)" price="1 380" note="230 zł / zabieg" />
-            <PriceRow name="Pakiet 10 zabiegów (2 partie)" price="2 100" note="210 zł / zabieg" />
+            <h3 className="text-xl mb-4">Lipolaser</h3>
+            <PriceRow name="1 zabieg" price="60" note="czas zabiegu: 35 min" />
+            <PriceRow name="5 zabiegów" price="250" />
+            <PriceRow name="10 zabiegów" price="450" />
+          </div>
+
+          <div className="rounded-2xl border border-border bg-card p-8">
+            <h3 className="text-xl mb-4">RF — Fale radiowe</h3>
+            <PriceRow
+              name="1 zabieg"
+              price="100"
+              note="czas trwania: 1 partia 15–30 min, możliwość łączenia partii; zabieg 45 min"
+            />
+            <PriceRow name="5 zabiegów" price="400" />
+            <PriceRow name="10 zabiegów" price="700" />
+          </div>
+
+          <div className="rounded-2xl border border-border bg-card p-8">
+            <h3 className="text-xl mb-4">Liposukcja kawitacyjna</h3>
+            <PriceRow name="1 zabieg" price="120" note="czas zabiegu: 30 min" />
+            <PriceRow name="5 zabiegów" price="500" />
+            <PriceRow name="10 zabiegów" price="900" />
           </div>
         </div>
       </Section>
