@@ -1,4 +1,5 @@
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
+import designerIcon from "./designer.png";
 import {
   Outlet,
   Link,
@@ -68,18 +69,28 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
       { title: "Vita Space — Studio EMS, trening personalny i modelowanie sylwetki" },
-      { name: "description", content: "Vita Space — premium studio treningów EMS, treningów personalnych, presoterapii oraz zabiegów body shaping. Umów wizytę: 695 867 080." },
+      {
+        name: "description",
+        content:
+          "Vita Space — premium studio treningów EMS, treningów personalnych, presoterapii oraz zabiegów body shaping. Umów wizytę: 695 867 080.",
+      },
       { property: "og:title", content: "Vita Space — Studio EMS i trening personalny" },
-      { property: "og:description", content: "Premium studio EMS, trening personalny, presoterapia i modelowanie sylwetki." },
+      {
+        property: "og:description",
+        content: "Premium studio EMS, trening personalny, presoterapia i modelowanie sylwetki.",
+      },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
     ],
     links: [
       { rel: "stylesheet", href: appCss },
-      { rel: "icon", href: "/favicon.ico", type: "image/x-icon" },
+      { rel: "icon", href: designerIcon, type: "image/png" },
       { rel: "preconnect", href: "https://fonts.googleapis.com" },
       { rel: "preconnect", href: "https://fonts.gstatic.com", crossOrigin: "anonymous" },
-      { rel: "stylesheet", href: "https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Inter:wght@300;400;500;600&display=swap" },
+      {
+        rel: "stylesheet",
+        href: "https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Inter:wght@300;400;500;600&display=swap",
+      },
     ],
   }),
   shellComponent: RootShell,
