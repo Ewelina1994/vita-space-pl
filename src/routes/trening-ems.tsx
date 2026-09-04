@@ -2,16 +2,26 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { CheckCircle2, AlertTriangle, Zap, Clock, Target, ShieldCheck } from "lucide-react";
 import { SiteLayout, Section, PageHero } from "@/components/SiteLayout";
 import heroEms from "@/assets/hero-ems.jpg";
+import { absoluteAssetUrl, buildCanonicalUrl, canonicalLink } from "@/lib/seo";
 
 export const Route = createFileRoute("/trening-ems")({
   head: () => ({
     meta: [
       { title: "Trening EMS — Vita Space" },
-      { name: "description", content: "Trening EMS w Vita Space: elektrostymulacja mięśni, wskazania, przeciwwskazania i efekty. 25 minut = kilka godzin klasycznego treningu." },
+      {
+        name: "description",
+        content:
+          "Trening EMS w Vita Space: elektrostymulacja mięśni, wskazania, przeciwwskazania i efekty. 25 minut = kilka godzin klasycznego treningu.",
+      },
       { property: "og:title", content: "Trening EMS — Vita Space" },
-      { property: "og:description", content: "Elektrostymulacja mięśni w premium studio Vita Space." },
-      { property: "og:image", content: heroEms },
+      {
+        property: "og:description",
+        content: "Elektrostymulacja mięśni w premium studio Vita Space.",
+      },
+      { property: "og:url", content: buildCanonicalUrl("/trening-ems") },
+      { property: "og:image", content: absoluteAssetUrl(heroEms) },
     ],
+    links: [canonicalLink("/trening-ems")],
   }),
   component: EmsPage,
 });

@@ -2,6 +2,7 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { Check, Star } from "lucide-react";
 import { SiteLayout, PageHero, Section } from "@/components/SiteLayout";
 import studio from "@/assets/studio.jpg";
+import { absoluteAssetUrl, buildCanonicalUrl, canonicalLink } from "@/lib/seo";
 
 export const Route = createFileRoute("/cennik")({
   head: () => ({
@@ -12,7 +13,16 @@ export const Route = createFileRoute("/cennik")({
         content:
           "Cennik Vita Space: pakiety treningów EMS (1/8/16/24), EMS w parach, trening personalny, presoterapia i body shaping.",
       },
+      { property: "og:title", content: "Cennik — Vita Space" },
+      {
+        property: "og:description",
+        content:
+          "Cennik Vita Space: pakiety treningów EMS, EMS w parach, trening personalny, presoterapia i body shaping.",
+      },
+      { property: "og:url", content: buildCanonicalUrl("/cennik") },
+      { property: "og:image", content: absoluteAssetUrl(studio) },
     ],
+    links: [canonicalLink("/cennik")],
   }),
   component: Cennik,
 });

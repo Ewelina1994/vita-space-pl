@@ -3,13 +3,27 @@ import { Phone, Mail, MapPin, Clock, Send } from "lucide-react";
 import { useState } from "react";
 import { SiteLayout, PageHero } from "@/components/SiteLayout";
 import studio from "@/assets/studio.jpg";
+import { absoluteAssetUrl, buildCanonicalUrl, canonicalLink } from "@/lib/seo";
 
 export const Route = createFileRoute("/kontakt")({
   head: () => ({
     meta: [
       { title: "Kontakt — Vita Space" },
-      { name: "description", content: "Skontaktuj się z Vita Space. Telefon: 695 867 080. Formularz kontaktowy, mapa i dane studia EMS." },
+      {
+        name: "description",
+        content:
+          "Skontaktuj się z Vita Space. Telefon: 695 867 080. Formularz kontaktowy, mapa i dane studia EMS.",
+      },
+      { property: "og:title", content: "Kontakt — Vita Space" },
+      {
+        property: "og:description",
+        content:
+          "Skontaktuj się z Vita Space. Telefon: 695 867 080. Formularz kontaktowy, mapa i dane studia EMS.",
+      },
+      { property: "og:url", content: buildCanonicalUrl("/kontakt") },
+      { property: "og:image", content: absoluteAssetUrl(studio) },
     ],
+    links: [canonicalLink("/kontakt")],
   }),
   component: Kontakt,
 });
@@ -48,7 +62,9 @@ function Kontakt() {
               <div className="font-display text-3xl md:text-4xl mt-1">695 867 080</div>
             </div>
           </div>
-          <div className="hidden md:block text-sm text-muted-foreground group-hover:text-gold transition">Umów wizytę →</div>
+          <div className="hidden md:block text-sm text-muted-foreground group-hover:text-gold transition">
+            Umów wizytę →
+          </div>
         </a>
       </section>
 
@@ -56,7 +72,9 @@ function Kontakt() {
         {/* Formularz */}
         <div className="rounded-2xl border border-border bg-card p-8 md:p-10">
           <h2 className="text-3xl mb-2">Formularz kontaktowy</h2>
-          <p className="text-sm text-muted-foreground mb-8">Odpowiadamy zwykle w ciągu kilku godzin.</p>
+          <p className="text-sm text-muted-foreground mb-8">
+            Odpowiadamy zwykle w ciągu kilku godzin.
+          </p>
 
           <form onSubmit={onSubmit} className="space-y-5">
             <div className="grid md:grid-cols-2 gap-5">
@@ -65,7 +83,9 @@ function Kontakt() {
             </div>
             <Field label="E-mail" name="email" type="email" required />
             <div>
-              <label className="block text-xs uppercase tracking-widest text-muted-foreground mb-2">Interesuje mnie</label>
+              <label className="block text-xs uppercase tracking-widest text-muted-foreground mb-2">
+                Interesuje mnie
+              </label>
               <select
                 name="topic"
                 className="w-full rounded-lg border border-input bg-background px-4 py-3 text-sm focus:outline-none focus:border-gold"
@@ -79,7 +99,9 @@ function Kontakt() {
               </select>
             </div>
             <div>
-              <label className="block text-xs uppercase tracking-widest text-muted-foreground mb-2">Wiadomość</label>
+              <label className="block text-xs uppercase tracking-widest text-muted-foreground mb-2">
+                Wiadomość
+              </label>
               <textarea
                 name="message"
                 rows={5}
@@ -105,17 +127,36 @@ function Kontakt() {
         {/* Dane kontaktowe */}
         <div className="space-y-6">
           <ContactCard icon={Phone} title="Telefon" value="695 867 080" href="tel:+48695867080" />
-          <ContactCard icon={Mail} title="E-mail" value="kontakt@vitaspace.pl" href="mailto:kontakt@vitaspace.pl" />
-          <ContactCard icon={MapPin} title="Adres" value="Studio Vita Space" note="Umów wizytę, aby otrzymać dokładny adres." />
+          <ContactCard
+            icon={Mail}
+            title="E-mail"
+            value="kontakt@vitaspace.pl"
+            href="mailto:kontakt@vitaspace.pl"
+          />
+          <ContactCard
+            icon={MapPin}
+            title="Adres"
+            value="Studio Vita Space"
+            note="Umów wizytę, aby otrzymać dokładny adres."
+          />
           <div className="rounded-2xl border border-border bg-card p-6">
             <div className="flex items-center gap-3 mb-4">
               <Clock className="h-5 w-5 text-gold" />
               <h3 className="text-lg">Godziny otwarcia</h3>
             </div>
             <div className="space-y-2 text-sm">
-              <div className="flex justify-between border-b border-border/50 pb-2"><span className="text-muted-foreground">Poniedziałek – Piątek</span><span>08:00 – 21:00</span></div>
-              <div className="flex justify-between border-b border-border/50 pb-2"><span className="text-muted-foreground">Sobota</span><span>09:00 – 15:00</span></div>
-              <div className="flex justify-between"><span className="text-muted-foreground">Niedziela</span><span className="text-muted-foreground">nieczynne</span></div>
+              <div className="flex justify-between border-b border-border/50 pb-2">
+                <span className="text-muted-foreground">Poniedziałek – Piątek</span>
+                <span>08:00 – 21:00</span>
+              </div>
+              <div className="flex justify-between border-b border-border/50 pb-2">
+                <span className="text-muted-foreground">Sobota</span>
+                <span>09:00 – 15:00</span>
+              </div>
+              <div className="flex justify-between">
+                <span className="text-muted-foreground">Niedziela</span>
+                <span className="text-muted-foreground">nieczynne</span>
+              </div>
             </div>
           </div>
         </div>
@@ -139,10 +180,22 @@ function Kontakt() {
   );
 }
 
-function Field({ label, name, type = "text", required }: { label: string; name: string; type?: string; required?: boolean }) {
+function Field({
+  label,
+  name,
+  type = "text",
+  required,
+}: {
+  label: string;
+  name: string;
+  type?: string;
+  required?: boolean;
+}) {
   return (
     <div>
-      <label className="block text-xs uppercase tracking-widest text-muted-foreground mb-2">{label}</label>
+      <label className="block text-xs uppercase tracking-widest text-muted-foreground mb-2">
+        {label}
+      </label>
       <input
         name={name}
         type={type}
@@ -153,7 +206,19 @@ function Field({ label, name, type = "text", required }: { label: string; name: 
   );
 }
 
-function ContactCard({ icon: Icon, title, value, href, note }: { icon: typeof Phone; title: string; value: string; href?: string; note?: string }) {
+function ContactCard({
+  icon: Icon,
+  title,
+  value,
+  href,
+  note,
+}: {
+  icon: typeof Phone;
+  title: string;
+  value: string;
+  href?: string;
+  note?: string;
+}) {
   const content = (
     <div className="rounded-2xl border border-border bg-card p-6 flex items-start gap-4 hover:border-gold/60 transition">
       <div className="h-12 w-12 rounded-full bg-gold/10 border border-gold/30 flex items-center justify-center shrink-0">

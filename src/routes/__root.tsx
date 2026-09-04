@@ -12,13 +12,46 @@ import { useEffect, type ReactNode } from "react";
 
 import appCss from "../styles.css?url";
 import { reportLovableError } from "../lib/lovable-error-reporting";
+import { SITE_URL, absoluteAssetUrl } from "../lib/seo";
+
+const localBusinessSchema = {
+  "@context": "https://schema.org",
+  "@type": "HealthClub",
+  name: "Vita Space",
+  url: SITE_URL,
+  image: absoluteAssetUrl(designerIcon),
+  telephone: "+48 695 867 080",
+  email: "kontakt@vitaspace.pl",
+  address: {
+    "@type": "PostalAddress",
+    streetAddress: "ul. Wroclawska 12/1",
+    addressLocality: "Wieruszow",
+    addressCountry: "PL",
+  },
+  openingHoursSpecification: [
+    {
+      "@type": "OpeningHoursSpecification",
+      dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+      opens: "08:00",
+      closes: "21:00",
+    },
+    {
+      "@type": "OpeningHoursSpecification",
+      dayOfWeek: "Saturday",
+      opens: "09:00",
+      closes: "15:00",
+    },
+  ],
+};
 
 function NotFoundComponent() {
   return (
     <div className="flex min-h-screen items-center justify-center bg-background px-4">
       <div className="max-w-md text-center">
         <h1 className="font-display text-7xl gold-text">404</h1>
-        <h2 className="mt-4 text-xl font-semibold text-foreground">Strona nie została znaleziona</h2>
+        <h2 className="mt-4 text-xl font-semibold text-foreground">
+          Strona nie została znaleziona
+        </h2>
         <p className="mt-2 text-sm text-muted-foreground">
           Strona, której szukasz, nie istnieje lub została przeniesiona.
         </p>
@@ -45,16 +78,26 @@ function ErrorComponent({ error, reset }: { error: Error; reset: () => void }) {
   return (
     <div className="flex min-h-screen items-center justify-center bg-background px-4">
       <div className="max-w-md text-center">
-        <h1 className="text-xl font-semibold tracking-tight text-foreground">Ta strona się nie załadowała</h1>
-        <p className="mt-2 text-sm text-muted-foreground">Wystąpił błąd. Spróbuj odświeżyć stronę lub wróć na stronę główną.</p>
+        <h1 className="text-xl font-semibold tracking-tight text-foreground">
+          Ta strona się nie załadowała
+        </h1>
+        <p className="mt-2 text-sm text-muted-foreground">
+          Wystąpił błąd. Spróbuj odświeżyć stronę lub wróć na stronę główną.
+        </p>
         <div className="mt-6 flex flex-wrap justify-center gap-2">
           <button
-            onClick={() => { router.invalidate(); reset(); }}
+            onClick={() => {
+              router.invalidate();
+              reset();
+            }}
             className="inline-flex items-center justify-center rounded-full bg-primary px-6 py-2.5 text-sm font-medium text-primary-foreground hover:opacity-90"
           >
             Spróbuj ponownie
           </button>
-          <a href="/" className="inline-flex items-center justify-center rounded-full border border-border px-6 py-2.5 text-sm text-foreground hover:bg-accent hover:text-accent-foreground">
+          <a
+            href="/"
+            className="inline-flex items-center justify-center rounded-full border border-border px-6 py-2.5 text-sm text-foreground hover:bg-accent hover:text-accent-foreground"
+          >
             Strona główna
           </a>
         </div>
@@ -80,6 +123,12 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
         content: "Premium studio EMS, trening personalny, presoterapia i modelowanie sylwetki.",
       },
       { property: "og:type", content: "website" },
+      { property: "og:site_name", content: "Vita Space" },
+      { property: "og:locale", content: "pl_PL" },
+      {
+        name: "robots",
+        content: "index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1",
+      },
       { name: "twitter:card", content: "summary_large_image" },
     ],
     links: [
@@ -102,8 +151,17 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
 function RootShell({ children }: { children: ReactNode }) {
   return (
     <html lang="pl">
-      <head><HeadContent /></head>
-      <body>{children}<Scripts /></body>
+      <head>
+        <HeadContent />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessSchema) }}
+        />
+      </head>
+      <body>
+        {children}
+        <Scripts />
+      </body>
     </html>
   );
 }

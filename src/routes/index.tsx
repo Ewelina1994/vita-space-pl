@@ -6,13 +6,27 @@ import studio from "@/assets/studio.jpg";
 import presoImg from "@/assets/presoterapia.jpg";
 import bodyImg from "@/assets/body-shaping.jpg";
 import personalImg from "@/assets/personal.jpg";
+import { absoluteAssetUrl, buildCanonicalUrl, canonicalLink } from "@/lib/seo";
 
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
       { title: "Vita Space — Premium Studio EMS & Trening Personalny" },
-      { name: "description", content: "Vita Space to premium studio EMS, treningów personalnych, presoterapii i modelowania sylwetki. Efekty w krótszym czasie." },
+      {
+        name: "description",
+        content:
+          "Vita Space to premium studio EMS, treningów personalnych, presoterapii i modelowania sylwetki. Efekty w krótszym czasie.",
+      },
+      { property: "og:title", content: "Vita Space — Premium Studio EMS & Trening Personalny" },
+      {
+        property: "og:description",
+        content:
+          "Vita Space to premium studio EMS, treningów personalnych, presoterapii i modelowania sylwetki. Efekty w krótszym czasie.",
+      },
+      { property: "og:url", content: buildCanonicalUrl("/") },
+      { property: "og:image", content: absoluteAssetUrl(heroEms) },
     ],
+    links: [canonicalLink("/")],
   }),
   component: Index,
 });
