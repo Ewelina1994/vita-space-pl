@@ -96,7 +96,7 @@ export function SiteLayout({ children }: { children: ReactNode }) {
             <ul className="space-y-3 text-sm text-muted-foreground">
               <li className="flex items-center gap-2"><Phone className="h-4 w-4 text-gold" /> 695 867 080</li>
               <li className="flex items-center gap-2"><Mail className="h-4 w-4 text-gold" /> kontakt@vitaspace.pl</li>
-              <li className="flex items-start gap-2"><MapPin className="h-4 w-4 text-gold mt-0.5" /> Studio Vita Space</li>
+              <li className="flex items-start gap-2"><MapPin className="h-4 w-4 text-gold mt-0.5" /> Wieruszów, ul. Wrocławska 12/1</li>
             </ul>
           </div>
           <div>

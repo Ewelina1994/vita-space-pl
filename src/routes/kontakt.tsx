@@ -136,8 +136,7 @@ function Kontakt() {
           <ContactCard
             icon={MapPin}
             title="Adres"
-            value="Studio Vita Space"
-            note="Umów wizytę, aby otrzymać dokładny adres."
+            value="Wieruszów, ul. Wrocławska 12/1"
           />
           <div className="rounded-2xl border border-border bg-card p-6">
             <div className="flex items-center gap-3 mb-4">
