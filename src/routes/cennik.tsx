@@ -291,15 +291,15 @@ function Cennik() {
               price="100"
               note="czas trwania: 1 partia 15–30 min, możliwość łączenia partii; zabieg 45 min"
             />
-            <PriceRow name="5 zabiegów" price="400" />
-            <PriceRow name="10 zabiegów" price="700" />
+            <PriceRow name="5 zabiegów" price="450" note="90 zł / zabieg" />
+            <PriceRow name="10 zabiegów" price="800" note="80 zł / zabieg" />
           </div>
 
           <div className="rounded-2xl border border-border bg-card p-8">
             <h3 className="text-xl mb-4">Liposukcja kawitacyjna</h3>
-            <PriceRow name="1 zabieg" price="120" note="czas zabiegu: 30 min" />
-            <PriceRow name="5 zabiegów" price="500" />
-            <PriceRow name="10 zabiegów" price="900" />
+            <PriceRow name="1 zabieg" price="100" note="czas zabiegu: 30 min" />
+            <PriceRow name="5 zabiegów" price="450" note="90 zł / zabieg" />
+            <PriceRow name="10 zabiegów" price="800" note="80 zł / zabieg" />
           </div>
         </div>
       </Section>
