@@ -16,7 +16,7 @@ export const Route = createFileRoute("/trening-ems")({
       { property: "og:title", content: "Trening EMS — Vita Space" },
       {
         property: "og:description",
-        content: "Elektrostymulacja mięśni w premium studio Vita Space.",
+        content: "Elektrostymulacja mięśni w studio Vita Space.",
       },
       { property: "og:url", content: buildCanonicalUrl("/trening-ems") },
       { property: "og:image", content: absoluteAssetUrl(heroEms) },

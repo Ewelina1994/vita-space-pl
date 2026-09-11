@@ -21,7 +21,7 @@ const localBusinessSchema = {
   url: SITE_URL,
   image: absoluteAssetUrl(designerIcon),
   telephone: "+48 695 867 080",
-  email: "kontakt@vitaspace.pl",
+  email: "vitaspace.kontakt@gmail.com",
   address: {
     "@type": "PostalAddress",
     streetAddress: "ul. Wroclawska 12/1",
@@ -115,12 +115,12 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       {
         name: "description",
         content:
-          "Vita Space — premium studio treningów EMS, treningów personalnych, presoterapii oraz zabiegów body shaping. Umów wizytę: 695 867 080.",
+          "Vita Space — studio treningów EMS, treningów personalnych, presoterapii oraz zabiegów body shaping. Umów wizytę: 695 867 080.",
       },
       { property: "og:title", content: "Vita Space — Studio EMS i trening personalny" },
       {
         property: "og:description",
-        content: "Premium studio EMS, trening personalny, presoterapia i modelowanie sylwetki.",
+        content: "Studio EMS, trening personalny, presoterapia i modelowanie sylwetki.",
       },
       { property: "og:type", content: "website" },
       { property: "og:site_name", content: "Vita Space" },

@@ -101,26 +101,32 @@ function Cennik() {
               perSession: "89 zł / sesja",
             },
             {
+              name: "Pakiet Start",
+              sessions: "4 treningi",
+              price: "420",
+              perSession: "105 zł / sesja",
+            },
+            {
               name: "Pakiet Mini",
               sessions: "6 treningów",
               price: "600",
               perSession: "100 zł / sesja",
             },
             {
-              name: "Pakiet Start",
+              name: "Pakiet Progress",
               sessions: "8 treningów",
               price: "760",
               perSession: "95 zł / sesja",
             },
             {
-              name: "Pakiet Progress",
+              name: "Pakiet Regular",
               sessions: "16 treningów",
               price: "1 440",
               perSession: "90 zł / sesja",
               featured: true,
             },
             {
-              name: "Pakiet Regular",
+              name: "Pakiet Premium",
               sessions: "24 treningi",
               price: "2 040",
               perSession: "85 zł / sesja",
@@ -150,26 +156,32 @@ function Cennik() {
                 perSession: "75 zł / osoba",
               },
               {
+                name: "Pakiet Start",
+                sessions: "4 treningi",
+                price: "380",
+                perSession: "95 zł / osoba",
+              },
+              {
                 name: "Pakiet Mini",
                 sessions: "6 treningów",
                 price: "540",
                 perSession: "90 zł / osoba",
               },
               {
-                name: "Pakiet Start",
+                name: "Pakiet Progress",
                 sessions: "8 treningów",
                 price: "680",
                 perSession: "85 zł / osoba",
               },
               {
-                name: "Pakiet Progress",
+                name: "Pakiet Regular",
                 sessions: "16 treningów",
                 price: "1 280",
                 perSession: "80 zł / osoba",
                 featured: true,
               },
               {
-                name: "Pakiet Regular",
+                name: "Pakiet Premium",
                 sessions: "24 treningi",
                 price: "1 800",
                 perSession: "75 zł / osoba",
@@ -189,6 +201,7 @@ function Cennik() {
             </p>
             <div className="mt-4">
               <PriceRow name="Sesja pojedyncza" price="100" />
+              <PriceRow name="Pakiet 4 treningi" price="380" note="95 zł / sesja" />
               <PriceRow name="Pakiet 8 treningów" price="720" note="90 zł / sesja" />
               <PriceRow name="Pakiet 16 treningów" price="1 280" note="80 zł / sesja" />
               <PriceRow name="Pakiet 24 treningi" price="1 680" note="70 zł / sesja" />
@@ -199,6 +212,7 @@ function Cennik() {
             <p className="text-sm text-muted-foreground mb-2">Cena za osobę.</p>
             <div className="mt-4">
               <PriceRow name="Sesja pojedyncza" price="70" note="za osobę" />
+              <PriceRow name="Pakiet 4 treningi" price="260" note="65 zł / sesja / osoba" />
               <PriceRow name="Pakiet 8 treningów" price="520" note="65 zł / sesja / osoba" />
               <PriceRow name="Pakiet 16 treningów" price="880" note="55 zł / sesja / osoba" />
               <PriceRow name="Pakiet 24 treningi" price="1 200" note="50 zł / sesja / osoba" />
@@ -265,7 +279,7 @@ function Cennik() {
 
           <div className="rounded-2xl border border-border bg-card p-8">
             <h3 className="text-xl mb-4">Lipolaser</h3>
-            <PriceRow name="1 zabieg" price="60" note="czas zabiegu: 35 min" />
+            <PriceRow name="1 zabieg" price="70" note="czas zabiegu: 35 min" />
             <PriceRow name="5 zabiegów" price="250" />
             <PriceRow name="10 zabiegów" price="450" />
           </div>

@@ -11,17 +11,17 @@ import { absoluteAssetUrl, buildCanonicalUrl, canonicalLink } from "@/lib/seo";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Vita Space — Premium Studio EMS & Trening Personalny" },
+      { title: "Vita Space — Studio EMS & Trening Personalny" },
       {
         name: "description",
         content:
-          "Vita Space to premium studio EMS, treningów personalnych, presoterapii i modelowania sylwetki. Efekty w krótszym czasie.",
+          "Vita Space studio EMS, treningów personalnych, presoterapii i modelowania sylwetki. Efekty w krótszym czasie.",
       },
-      { property: "og:title", content: "Vita Space — Premium Studio EMS & Trening Personalny" },
+      { property: "og:title", content: "Vita Space — Studio EMS & Trening Personalny" },
       {
         property: "og:description",
         content:
-          "Vita Space to premium studio EMS, treningów personalnych, presoterapii i modelowania sylwetki. Efekty w krótszym czasie.",
+          "Vita Space to studio EMS, treningów personalnych, presoterapii i modelowania sylwetki. Efekty w krótszym czasie.",
       },
       { property: "og:url", content: buildCanonicalUrl("/") },
       { property: "og:image", content: absoluteAssetUrl(heroEms) },
@@ -50,7 +50,7 @@ function Index() {
             <div className="flex items-center gap-3 mb-6">
               <div className="h-px w-12 bg-gold" />
               <span className="text-xs uppercase tracking-[0.35em] text-gold">
-                Premium EMS Studio
+                EMS Studio
               </span>
             </div>
             <h1 className="text-5xl md:text-7xl leading-[1.02]">

@@ -13,6 +13,7 @@ import { Route as IndexRouteImport } from './routes/index'
 import { Route as CennikRouteImport } from './routes/cennik'
 import { Route as InneUslugiRouteImport } from './routes/inne-uslugi'
 import { Route as KontaktRouteImport } from './routes/kontakt'
+import { Route as PolitykaPrywatnosciRouteImport } from './routes/polityka-prywatnosci'
 import { Route as TreningEmsRouteImport } from './routes/trening-ems'
 import { Route as TreningPersonalnyRouteImport } from './routes/trening-personalny'
 
@@ -36,6 +37,11 @@ const KontaktRoute = KontaktRouteImport.update({
   path: '/kontakt',
   getParentRoute: () => rootRouteImport,
 } as any)
+const PolitykaPrywatnosciRoute = PolitykaPrywatnosciRouteImport.update({
+  id: '/polityka-prywatnosci',
+  path: '/polityka-prywatnosci',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const TreningEmsRoute = TreningEmsRouteImport.update({
   id: '/trening-ems',
   path: '/trening-ems',
@@ -52,6 +58,7 @@ export interface FileRoutesByFullPath {
   '/cennik': typeof CennikRoute
   '/inne-uslugi': typeof InneUslugiRoute
   '/kontakt': typeof KontaktRoute
+  '/polityka-prywatnosci': typeof PolitykaPrywatnosciRoute
   '/trening-ems': typeof TreningEmsRoute
   '/trening-personalny': typeof TreningPersonalnyRoute
 }
@@ -60,6 +67,7 @@ export interface FileRoutesByTo {
   '/cennik': typeof CennikRoute
   '/inne-uslugi': typeof InneUslugiRoute
   '/kontakt': typeof KontaktRoute
+  '/polityka-prywatnosci': typeof PolitykaPrywatnosciRoute
   '/trening-ems': typeof TreningEmsRoute
   '/trening-personalny': typeof TreningPersonalnyRoute
 }
@@ -69,6 +77,7 @@ export interface FileRoutesById {
   '/cennik': typeof CennikRoute
   '/inne-uslugi': typeof InneUslugiRoute
   '/kontakt': typeof KontaktRoute
+  '/polityka-prywatnosci': typeof PolitykaPrywatnosciRoute
   '/trening-ems': typeof TreningEmsRoute
   '/trening-personalny': typeof TreningPersonalnyRoute
 }
@@ -79,6 +88,7 @@ export interface FileRouteTypes {
     | '/cennik'
     | '/inne-uslugi'
     | '/kontakt'
+    | '/polityka-prywatnosci'
     | '/trening-ems'
     | '/trening-personalny'
   fileRoutesByTo: FileRoutesByTo
@@ -87,6 +97,7 @@ export interface FileRouteTypes {
     | '/cennik'
     | '/inne-uslugi'
     | '/kontakt'
+    | '/polityka-prywatnosci'
     | '/trening-ems'
     | '/trening-personalny'
   id:
@@ -95,6 +106,7 @@ export interface FileRouteTypes {
     | '/cennik'
     | '/inne-uslugi'
     | '/kontakt'
+    | '/polityka-prywatnosci'
     | '/trening-ems'
     | '/trening-personalny'
   fileRoutesById: FileRoutesById
@@ -104,6 +116,7 @@ export interface RootRouteChildren {
   CennikRoute: typeof CennikRoute
   InneUslugiRoute: typeof InneUslugiRoute
   KontaktRoute: typeof KontaktRoute
+  PolitykaPrywatnosciRoute: typeof PolitykaPrywatnosciRoute
   TreningEmsRoute: typeof TreningEmsRoute
   TreningPersonalnyRoute: typeof TreningPersonalnyRoute
 }
@@ -138,6 +151,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof KontaktRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/polityka-prywatnosci': {
+      id: '/polityka-prywatnosci'
+      path: '/polityka-prywatnosci'
+      fullPath: '/polityka-prywatnosci'
+      preLoaderRoute: typeof PolitykaPrywatnosciRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/trening-ems': {
       id: '/trening-ems'
       path: '/trening-ems'
@@ -160,6 +180,7 @@ const rootRouteChildren: RootRouteChildren = {
   CennikRoute: CennikRoute,
   InneUslugiRoute: InneUslugiRoute,
   KontaktRoute: KontaktRoute,
+  PolitykaPrywatnosciRoute: PolitykaPrywatnosciRoute,
   TreningEmsRoute: TreningEmsRoute,
   TreningPersonalnyRoute: TreningPersonalnyRoute,
 }

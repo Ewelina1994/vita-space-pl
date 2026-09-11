@@ -1,7 +1,8 @@
 import { Link } from "@tanstack/react-router";
-import { Phone, Menu, X, MapPin, Mail } from "lucide-react";
+import { Phone, Menu, X, MapPin, Mail, Download } from "lucide-react";
 import { useState, type ReactNode } from "react";
 import { cn } from "@/lib/utils";
+import plakatPKlobut from "@/assets/plakat_p_klobut.jpg";
 
 const nav = [
   { to: "/", label: "Strona główna" },
@@ -76,11 +77,11 @@ export function SiteLayout({ children }: { children: ReactNode }) {
       <main className="flex-1">{children}</main>
 
       <footer className="border-t border-border/60 bg-navy-deep/60 mt-24">
-        <div className="max-w-7xl mx-auto px-6 py-16 grid gap-10 md:grid-cols-4">
+        <div className="max-w-7xl mx-auto px-6 py-16 grid gap-10 md:grid-cols-5">
           <div>
             <div className="font-display text-2xl">Vita <span className="gold-text">Space</span></div>
             <p className="mt-4 text-sm text-muted-foreground leading-relaxed">
-              Premium studio treningów EMS, personalnych oraz zabiegów modelujących sylwetkę.
+              Studio treningów EMS, personalnych oraz zabiegów modelujących sylwetkę.
             </p>
           </div>
           <div>
@@ -95,7 +96,7 @@ export function SiteLayout({ children }: { children: ReactNode }) {
             <h4 className="text-sm uppercase tracking-widest text-gold mb-4">Kontakt</h4>
             <ul className="space-y-3 text-sm text-muted-foreground">
               <li className="flex items-center gap-2"><Phone className="h-4 w-4 text-gold" /> 695 867 080</li>
-              <li className="flex items-center gap-2"><Mail className="h-4 w-4 text-gold" /> kontakt@vitaspace.pl</li>
+              <li className="flex items-center gap-2"><Mail className="h-4 w-4 text-gold" /> vitaspace.kontakt@gmail.com</li>
               <li className="flex items-start gap-2"><MapPin className="h-4 w-4 text-gold mt-0.5" /> Wieruszów, ul. Wrocławska 12/1</li>
             </ul>
           </div>
@@ -107,11 +108,28 @@ export function SiteLayout({ children }: { children: ReactNode }) {
               <li>Niedziela: nieczynne</li>
             </ul>
           </div>
+          <div>
+            <h4 className="text-sm uppercase tracking-widest text-gold mb-4">Materiały</h4>
+            <a
+              href={plakatPKlobut}
+              download
+              className="block"
+            >
+              <img
+                src={plakatPKlobut}
+                alt="Plakat P. Kłobut"
+                className="rounded border border-gold/40 hover:border-gold/70 transition-colors max-w-[200px] h-auto"
+              />
+            </a>
+          </div>
         </div>
         <div className="border-t border-border/40">
-          <div className="max-w-7xl mx-auto px-6 py-6 text-xs text-muted-foreground flex flex-col md:flex-row justify-between gap-2">
+          <div className="max-w-7xl mx-auto px-6 py-6 text-xs text-muted-foreground flex flex-col md:flex-row justify-between gap-4 items-start md:items-center">
             <span>© {new Date().getFullYear()} Vita Space. Wszystkie prawa zastrzeżone.</span>
             <span>Studio EMS · Trening Personalny · Modelowanie sylwetki</span>
+            <Link to="/polityka-prywatnosci" className="hover:text-gold transition">
+              Polityka Prywatności
+            </Link>
           </div>
         </div>
       </footer>

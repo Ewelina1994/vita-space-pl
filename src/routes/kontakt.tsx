@@ -130,8 +130,8 @@ function Kontakt() {
           <ContactCard
             icon={Mail}
             title="E-mail"
-            value="kontakt@vitaspace.pl"
-            href="mailto:kontakt@vitaspace.pl"
+            value="vitaspace.kontakt@gmail.com"
+            href="mailto:vitaspace.kontakt@gmail.com"
           />
           <ContactCard
             icon={MapPin}
