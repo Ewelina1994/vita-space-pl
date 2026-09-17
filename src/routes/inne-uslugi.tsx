@@ -254,6 +254,95 @@ function InneUslugi() {
         </div>
       </section>
 
+      {/* FALA UDERZENIOWA */}
+      <Section
+        eyebrow="Fala Uderzeniowa"
+        title="Fala uderzeniowa – regeneracja, zdrowie i piękna sylwetka"
+      >
+        <div className="grid lg:grid-cols-2 gap-12 items-start">
+          <div className="space-y-5 text-muted-foreground leading-relaxed">
+            <p>
+              <strong className="text-foreground">Fala uderzeniowa</strong> to nowoczesna,
+              nieinwazyjna terapia wykorzystująca impulsy akustyczne do pobudzenia naturalnych
+              procesów regeneracyjnych organizmu. Technologia ta od lat stosowana jest w
+              fizjoterapii i rehabilitacji, a obecnie z powodzeniem wykorzystywana jest również w
+              zabiegach modelowania sylwetki i poprawy jakości skóry.
+            </p>
+            <div>
+              <p className="font-medium text-foreground mb-3">Korzyści zdrowotne:</p>
+              <ul className="space-y-2">
+                {[
+                  "Łagodzi napięcia mięśniowe i dolegliwości bólowe",
+                  "Poprawia ukrwienie oraz dotlenienie tkanek",
+                  "Wspomaga regenerację mięśni i ścięgien",
+                  "Przyspiesza procesy naprawcze organizmu",
+                  "Wspiera metabolizm komórkowy",
+                  "Pomaga zmniejszyć obrzęki i zastoje limfatyczne",
+                  "Poprawia ruchomość oraz komfort funkcjonowania tkanek",
+                ].map((t) => (
+                  <li key={t} className="flex items-start gap-3">
+                    <CheckCircle2 className="h-5 w-5 text-gold shrink-0 mt-0.5" />
+                    <span className="text-sm">{t}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+            <div>
+              <p className="font-medium text-foreground mb-3">Korzyści estetyczne:</p>
+              <ul className="space-y-2">
+                {[
+                  "Redukuje widoczność cellulitu",
+                  "Wygładza i ujędrnia skórę",
+                  "Pobudza produkcję kolagenu i elastyny",
+                  "Poprawia napięcie oraz elastyczność skóry",
+                  "Wspomaga modelowanie sylwetki",
+                  "Poprawia kontury ciała i wygląd problematycznych partii",
+                ].map((t) => (
+                  <li key={t} className="flex items-start gap-3">
+                    <CheckCircle2 className="h-5 w-5 text-gold shrink-0 mt-0.5" />
+                    <span className="text-sm">{t}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+            <div className="pt-4 border-t border-border/60">
+              <p className="text-sm italic">
+                Regularne zabiegi falą uderzeniową pomagają odzyskać uczucie lekkości, poprawić
+                kondycję tkanek, a jednocześnie zadbać o bardziej jędrną, gładką i estetycznie
+                wyglądającą skórę. To doskonałe połączenie korzyści zdrowotnych i estetycznych,
+                wspierające zarówno dobre samopoczucie, jak i atrakcyjny wygląd sylwetki.
+              </p>
+            </div>
+          </div>
+          <div className="bg-gradient-to-br from-navy to-navy-deep rounded-2xl border border-gold/30 p-8">
+            <h3 className="text-2xl font-semibold mb-4">Co daje zabieg?</h3>
+            <div className="space-y-4 text-sm text-muted-foreground">
+              <div>
+                <p className="font-medium text-foreground mb-2">Regeneracja i zdrowie:</p>
+                <p>
+                  Naturalnie wspomaga gojenie się tkanek, wspiera leczenie chronicznych dolegliwości
+                  i przywraca organizm do równowagi.
+                </p>
+              </div>
+              <div>
+                <p className="font-medium text-foreground mb-2">Piękna sylwetka:</p>
+                <p>
+                  Zmniejsza widoczność niedoskonałości, modeluje kontury i poprawia wygląd skóry na
+                  całym ciele.
+                </p>
+              </div>
+              <div>
+                <p className="font-medium text-foreground mb-2">Kompleksowe efekty:</p>
+                <p>
+                  Łączy korzyści fizjoterapeutyczne z zabiegami estetycznymi, dając widoczne
+                  rezultaty zarówno dla zdrowia, jak i wyglądu.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </Section>
+
       {/* PRZECIWWSKAZANIA */}
       <section>
         <div className="max-w-7xl mx-auto px-6 py-20 md:py-28">
