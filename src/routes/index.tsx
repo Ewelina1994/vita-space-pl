@@ -3,9 +3,9 @@ import { ArrowRight, Zap, Users, Sparkles, Heart, CheckCircle2, Phone } from "lu
 import { SiteLayout, Section } from "@/components/SiteLayout";
 import heroEms from "@/assets/hero-ems.jpg";
 import studio from "@/assets/studio.jpg";
-import presoImg from "@/assets/presoterapia.jpg";
-import bodyImg from "@/assets/body-shaping.jpg";
-import personalImg from "@/assets/personal.jpg";
+import presoImg from "@/assets/presoterapia.png";
+import rf from "@/assets/rf.png";
+import personalImg from "@/assets/personal.png";
 import { absoluteAssetUrl, buildCanonicalUrl, canonicalLink } from "@/lib/seo";
 
 export const Route = createFileRoute("/")({
@@ -123,7 +123,7 @@ function Index() {
               to: "/inne-uslugi",
             },
             {
-              img: bodyImg,
+              img: rf,
               title: "Body Shaping",
               desc: "Zabiegi modelujące sylwetkę — redukcja tkanki tłuszczowej i ujędrnianie skóry.",
               to: "/inne-uslugi",

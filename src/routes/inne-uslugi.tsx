@@ -1,9 +1,9 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { CheckCircle2, AlertTriangle } from "lucide-react";
 import { SiteLayout, Section, PageHero } from "@/components/SiteLayout";
-import presoImg from "@/assets/presoterapia.jpg";
-import dermomasaz from "@/assets/dermomasaz.png";
-import bodyshaping from "@/assets/body-shaping.jpg";
+import presoImg from "@/assets/presoterapia.png";
+import body_shapin from "@/assets/body_shaping.png";
+import rf from "@/assets/rf.png";
 import lipolaser from "@/assets/lipolaser.png";
 import liposukcja from "@/assets/liposukcja kawitacyjna.png";
 import { absoluteAssetUrl, buildCanonicalUrl, canonicalLink } from "@/lib/seo";
@@ -24,7 +24,7 @@ export const Route = createFileRoute("/inne-uslugi")({
           "Presoterapia (drenaż limfatyczny) i zabiegi body shaping w Vita Space. Redukcja obrzęków, cellulitu i modelowanie sylwetki.",
       },
       { property: "og:url", content: buildCanonicalUrl("/inne-uslugi") },
-      { property: "og:image", content: absoluteAssetUrl(bodyshaping) },
+      { property: "og:image", content: absoluteAssetUrl(rf) },
     ],
     links: [canonicalLink("/inne-uslugi")],
   }),
@@ -38,7 +38,7 @@ function InneUslugi() {
         eyebrow="Presoterapia & Body Shaping"
         title="Zabiegi, które pracują za Ciebie"
         subtitle="Uzupełnij trening o nowoczesne technologie modelowania sylwetki i regeneracji ciała."
-        image={bodyshaping}
+        image={rf}
       />
 
       {/* PRESOTERAPIA */}
@@ -103,7 +103,7 @@ function InneUslugi() {
         <div className="grid lg:grid-cols-2 gap-12 items-start">
           <div className="rounded-2xl overflow-hidden">
             <img
-              src={dermomasaz}
+              src={body_shapin}
               alt="Body Shaping"
               loading="lazy"
               className="w-full h-full object-cover"
@@ -179,7 +179,7 @@ function InneUslugi() {
         <div className="grid lg:grid-cols-2 gap-12 items-start">
           <div className="rounded-2xl overflow-hidden">
             <img
-              src={bodyshaping}
+              src={rf}
               alt="Radiofrekwencja"
               loading="lazy"
               className="w-full h-full object-cover"

@@ -1,7 +1,7 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { CheckCircle2, User, Users } from "lucide-react";
 import { SiteLayout, Section, PageHero } from "@/components/SiteLayout";
-import personalImg from "@/assets/personal.jpg";
+import personalImg from "@/assets/personal.png";
 import { absoluteAssetUrl, buildCanonicalUrl, canonicalLink } from "@/lib/seo";
 
 export const Route = createFileRoute("/trening-personalny")({

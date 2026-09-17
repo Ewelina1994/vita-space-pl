@@ -29,13 +29,49 @@ export const Route = createFileRoute("/kontakt")({
 });
 
 function Kontakt() {
+  // co robi ten kod
   const [sent, setSent] = useState(false);
+  const [sending, setSending] = useState(false);
+  const [error, setError] = useState<string | null>(null);
 
-  const onSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+  const onSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    setSent(true);
-    (e.target as HTMLFormElement).reset();
-    setTimeout(() => setSent(false), 5000);
+    setError(null);
+
+    const form = e.currentTarget;
+    const accessKey = import.meta.env.VITE_WEB3FORMS_ACCESS_KEY;
+
+    if (!accessKey) {
+      setError("Brak konfiguracji wysyłki formularza. Ustaw VITE_WEB3FORMS_ACCESS_KEY.");
+      return;
+    }
+
+    const formData = new FormData(form);
+    formData.append("access_key", accessKey);
+    formData.append("subject", "Nowa wiadomość z formularza kontaktowego Vita Space");
+    formData.append("from_name", "Formularz Vita Space");
+
+    setSending(true);
+
+    try {
+      const response = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        body: formData,
+      });
+
+      const result = (await response.json()) as { success?: boolean; message?: string };
+      if (!response.ok || !result.success) {
+        throw new Error(result.message ?? "Nie udało się wysłać wiadomości.");
+      }
+
+      setSent(true);
+      form.reset();
+      setTimeout(() => setSent(false), 5000);
+    } catch (submitError) {
+      setError(submitError instanceof Error ? submitError.message : "Wystąpił błąd wysyłki.");
+    } finally {
+      setSending(false);
+    }
   };
 
   return (
@@ -48,7 +84,7 @@ function Kontakt() {
       />
 
       {/* Call to phone */}
-      <section className="max-w-7xl mx-auto px-6 -mt-4 md:-mt-8">
+      <section className="max-w-7xl mx-auto px-6 -mt-4 md:-mt-8 relative z-10">
         <a
           href="tel:+48695867080"
           className="group flex items-center justify-between gap-6 rounded-2xl border border-gold/50 bg-gradient-to-r from-navy to-navy-deep p-6 md:p-8 hover:border-gold transition"
@@ -112,10 +148,16 @@ function Kontakt() {
             </div>
             <button
               type="submit"
+              disabled={sending}
               className="inline-flex items-center gap-2 rounded-full bg-gold px-8 py-3.5 text-sm font-medium text-primary-foreground hover:opacity-90 transition"
             >
-              <Send className="h-4 w-4" /> Wyślij wiadomość
+              <Send className="h-4 w-4" /> {sending ? "Wysyłanie..." : "Wyślij wiadomość"}
             </button>
+            {error && (
+              <div className="rounded-lg border border-red-500/40 bg-red-500/10 px-4 py-3 text-sm text-red-300">
+                {error}
+              </div>
+            )}
             {sent && (
               <div className="rounded-lg border border-gold/40 bg-gold/10 px-4 py-3 text-sm text-gold">
                 Dziękujemy! Skontaktujemy się z Tobą jak najszybciej.
