@@ -131,6 +131,7 @@ function Kontakt() {
                 <option>Trening w parach</option>
                 <option>Presoterapia</option>
                 <option>Body Shaping</option>
+                <option>Endermologia LPG</option>
                 <option>Inne / konsultacja</option>
               </select>
             </div>

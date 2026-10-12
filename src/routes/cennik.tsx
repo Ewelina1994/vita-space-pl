@@ -97,8 +97,8 @@ function Cennik() {
             {
               name: "Trening próbny",
               sessions: "1 trening",
-              price: "89",
-              perSession: "89 zł / sesja",
+              price: "59",
+              perSession: "59 zł / sesja",
             },
             {
               name: "Pakiet Start",
@@ -152,8 +152,8 @@ function Cennik() {
               {
                 name: "Sesja pojedyncza",
                 sessions: "1 trening",
-                price: "75",
-                perSession: "75 zł / osoba",
+                price: "59",
+                perSession: "59 zł / osoba",
               },
               {
                 name: "Pakiet Start",
@@ -300,6 +300,13 @@ function Cennik() {
             <PriceRow name="1 zabieg" price="100" note="czas zabiegu: 30 min" />
             <PriceRow name="5 zabiegów" price="450" note="90 zł / zabieg" />
             <PriceRow name="10 zabiegów" price="800" note="80 zł / zabieg" />
+          </div>
+
+          <div className="rounded-2xl border border-border bg-card p-8">
+            <h3 className="text-xl mb-4">Endermologia LPG</h3>
+            <PriceRow name="1 zabieg" price="120" note="czas zabiegu: 30–40 min" />
+            <PriceRow name="5 zabiegów" price="550" note="110 zł / zabieg" />
+            <PriceRow name="10 zabiegów" price="1 000" note="100 zł / zabieg" />
           </div>
         </div>
       </Section>

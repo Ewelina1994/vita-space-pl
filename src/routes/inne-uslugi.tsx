@@ -133,6 +133,51 @@ function InneUslugi() {
         </div>
       </Section>
 
+      {/* ENDERMOLOGIA LPG */}
+      <Section
+        eyebrow="Endermologia LPG"
+        title="Endermologia LPG — lifting, modelowanie i poprawa napięcia skóry"
+      >
+        <div className="grid lg:grid-cols-2 gap-12 items-start">
+          <div className="rounded-2xl overflow-hidden">
+            <img
+              src={rf}
+              alt="Endermologia LPG"
+              loading="lazy"
+              className="w-full h-full object-cover"
+            />
+          </div>
+          <div className="space-y-5 text-muted-foreground leading-relaxed">
+            <p>
+              <strong className="text-foreground">Endermologia LPG</strong> to nowoczesna,
+              nieinwazyjna technologia stymulująca pracę skóry, tkanki tłuszczowej i mięśni dzięki
+              precyzyjnym, automatycznym ruchom głowicy. Zabieg działa na poprawę napięcia skóry,
+              redukcję cellulitu i modelowanie sylwetki bez bólu i bez rekonwalescencji.
+            </p>
+            <p className="font-medium text-foreground">Najczęściej poprawia:</p>
+            <ul className="space-y-2">
+              {[
+                "Napięcie i jędrność skóry",
+                "Widoczność cellulitu i nierówności skóry",
+                "Kontury sylwetki i miękkość tkanek",
+                "Krążenie i metabolizm komórkowy",
+                "Regenerację po wysiłku i zmęczeniu mięśni",
+              ].map((t) => (
+                <li key={t} className="flex items-start gap-3">
+                  <CheckCircle2 className="h-5 w-5 text-gold shrink-0 mt-0.5" />
+                  <span className="text-sm">{t}</span>
+                </li>
+              ))}
+            </ul>
+            <p>
+              Zabiegi LPG są świetnym uzupełnieniem treningów, diety i innych zabiegów
+              modelujących. Dają efekt liftingu, wygładzenia i poprawy ogólnej kondycji skóry na
+              całym ciele.
+            </p>
+          </div>
+        </div>
+      </Section>
+
       {/* KAWITACJA */}
       <section className="bg-navy-deep/50 border-y border-border/60">
         <div className="max-w-7xl mx-auto px-6 py-20 md:py-28">
