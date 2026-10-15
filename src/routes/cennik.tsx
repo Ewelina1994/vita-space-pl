@@ -152,8 +152,8 @@ function Cennik() {
               {
                 name: "Sesja pojedyncza",
                 sessions: "1 trening",
-                price: "59",
-                perSession: "59 zł / osoba",
+                price: "50",
+                perSession: "50 zł / osoba",
               },
               {
                 name: "Pakiet Start",
