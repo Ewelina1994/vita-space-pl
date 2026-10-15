@@ -170,9 +170,8 @@ function InneUslugi() {
               ))}
             </ul>
             <p>
-              Zabiegi LPG są świetnym uzupełnieniem treningów, diety i innych zabiegów
-              modelujących. Dają efekt liftingu, wygładzenia i poprawy ogólnej kondycji skóry na
-              całym ciele.
+              Zabiegi LPG są świetnym uzupełnieniem treningów, diety i innych zabiegów modelujących.
+              Dają efekt liftingu, wygładzenia i poprawy ogólnej kondycji skóry na całym ciele.
             </p>
           </div>
         </div>
