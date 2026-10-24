@@ -8,6 +8,9 @@ import lipolaser from "@/assets/lipolaser.png";
 import liposukcja from "@/assets/liposukcja kawitacyjna.png";
 import { absoluteAssetUrl, buildCanonicalUrl, canonicalLink } from "@/lib/seo";
 
+const lpgTreatmentImage =
+  "https://images.unsplash.com/photo-1515377905703-c4788e51af15?auto=format&fit=crop&w=1200&q=80";
+
 export const Route = createFileRoute("/inne-uslugi")({
   head: () => ({
     meta: [
@@ -246,8 +249,8 @@ function InneUslugi() {
         <div className="grid lg:grid-cols-2 gap-12 items-start">
           <div className="rounded-2xl overflow-hidden">
             <img
-              src={rf}
-              alt="Endermologia LPG"
+              src={lpgTreatmentImage}
+              alt="Klientka w białym stroju podczas zabiegu endermologii LPG z profesjonalną rolką masującą"
               loading="lazy"
               className="w-full h-full object-cover"
             />
