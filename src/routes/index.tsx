@@ -1,6 +1,6 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { ArrowRight, Zap, Users, Sparkles, Heart, CheckCircle2, Phone } from "lucide-react";
-import { SiteLayout, Section } from "@/components/SiteLayout";
+import { ArrowRight, CheckCircle2, Heart, Phone, Sparkles, Users, Zap } from "lucide-react";
+import { Section, SiteLayout } from "@/components/SiteLayout";
 import heroEms from "@/assets/hero-ems.jpg";
 import studio from "@/assets/studio.jpg";
 import presoImg from "@/assets/presoterapia.png";
@@ -49,9 +49,7 @@ function Index() {
           <div className="max-w-2xl">
             <div className="flex items-center gap-3 mb-6">
               <div className="h-px w-12 bg-gold" />
-              <span className="text-xs uppercase tracking-[0.35em] text-gold">
-                EMS Studio
-              </span>
+              <span className="text-xs uppercase tracking-[0.35em] text-gold">EMS Studio</span>
             </div>
             <h1 className="text-5xl md:text-7xl leading-[1.02]">
               Twoja sylwetka.
@@ -78,6 +76,20 @@ function Index() {
                 Zobacz cennik
               </Link>
             </div>
+
+            <div className="mt-8 max-w-2xl rounded-2xl border border-gold/50 bg-gradient-to-r from-gold/20 via-gold/10 to-transparent px-6 py-5 shadow-[0_0_35px_rgba(219,167,87,0.12)] backdrop-blur-sm">
+              <div className="text-[11px] uppercase tracking-[0.38em] text-gold">
+                Promocja otwarcia
+              </div>
+              <p className="mt-3 text-xl md:text-2xl font-medium leading-tight text-foreground">
+                1 trening lub zabieg -50% <span className="text-muted-foreground">oraz</span>
+                pakiety -20%
+              </p>
+              <p className="mt-2 text-base text-muted-foreground">
+                Promocja obowiązuje przez 1 miesiąc od otwarcia studia, do 24.11.2026.
+              </p>
+            </div>
+
             <div className="mt-14 grid grid-cols-3 gap-6 max-w-lg">
               {[
                 { n: "25", l: "minut treningu" },
