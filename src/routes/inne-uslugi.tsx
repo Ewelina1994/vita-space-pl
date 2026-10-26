@@ -1,6 +1,6 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { CheckCircle2, AlertTriangle } from "lucide-react";
-import { SiteLayout, Section, PageHero } from "@/components/SiteLayout";
+import { AlertTriangle, CheckCircle2 } from "lucide-react";
+import { PageHero, Section, SiteLayout } from "@/components/SiteLayout";
 import presoImg from "@/assets/presoterapia.png";
 import body_shapin from "@/assets/body_shaping.png";
 import rf from "@/assets/rf.png";
@@ -43,111 +43,6 @@ function InneUslugi() {
         subtitle="Uzupełnij trening o nowoczesne technologie modelowania sylwetki i regeneracji ciała."
         image={rf}
       />
-
-      {/* MASAŻE */}
-      <Section eyebrow="Masaże" title="Masaż klasyczny">
-        <div className="grid lg:grid-cols-2 gap-12 items-start">
-          <div className="space-y-5 text-muted-foreground leading-relaxed">
-            <p>
-              <strong className="text-foreground">Masaż klasyczny</strong> pomaga rozluźnić napięte
-              mięśnie, poprawić krążenie i wprowadzić uczucie głębokiego relaksu. To doskonały wybór
-              na regenerację po stresie i codziennym wysiłku.
-            </p>
-            <div className="rounded-2xl border border-border bg-card p-5">
-              <div className="text-xs uppercase tracking-[0.3em] text-gold mb-3">Cennik</div>
-              <ul className="space-y-2 text-sm">
-                <li className="flex items-center justify-between gap-4 border-b border-border/60 pb-2">
-                  <span>Pół godziny</span>
-                  <span className="font-medium text-foreground">60 zł</span>
-                </li>
-                <li className="flex items-center justify-between gap-4">
-                  <span>Godzina</span>
-                  <span className="font-medium text-foreground">90 zł</span>
-                </li>
-              </ul>
-            </div>
-          </div>
-          <div className="rounded-2xl overflow-hidden">
-            <img
-              src={presoImg}
-              alt="Masaż klasyczny"
-              loading="lazy"
-              className="w-full h-full object-cover"
-            />
-          </div>
-        </div>
-      </Section>
-
-      <Section eyebrow="Masaże" title="Masaż tkanek głębokich">
-        <div className="grid lg:grid-cols-2 gap-12 items-start">
-          <div className="space-y-5 text-muted-foreground leading-relaxed">
-            <p>
-              <strong className="text-foreground">Masaż tkanek głębokich</strong> skupia się na
-              głębszych warstwach mięśni i napięciach, wspierając regenerację, redukcję bólu oraz
-              poprawę mobilności. Działa szczególnie dobrze przy przeciążeniach, sztywności i
-              przewlekłym napięciu.
-            </p>
-            <div className="rounded-2xl border border-border bg-card p-5">
-              <div className="text-xs uppercase tracking-[0.3em] text-gold mb-3">Cennik</div>
-              <ul className="space-y-2 text-sm">
-                <li className="flex items-center justify-between gap-4 border-b border-border/60 pb-2">
-                  <span>Pół godziny</span>
-                  <span className="font-medium text-foreground">60 zł</span>
-                </li>
-                <li className="flex items-center justify-between gap-4">
-                  <span>Godzina</span>
-                  <span className="font-medium text-foreground">90 zł</span>
-                </li>
-              </ul>
-            </div>
-          </div>
-          <div className="rounded-2xl overflow-hidden">
-            <img
-              src={rf}
-              alt="Masaż tkanek głębokich"
-              loading="lazy"
-              className="w-full h-full object-cover"
-            />
-          </div>
-        </div>
-      </Section>
-
-      {/* MASAŻE */}
-      <Section eyebrow="Masaże" title="Masaż klasyczny i sportowy">
-        <div className="grid lg:grid-cols-2 gap-12 items-start">
-          <div className="rounded-2xl overflow-hidden">
-            <div className="aspect-[4/3] rounded-2xl bg-gradient-to-br from-gold/20 via-navy to-navy-deep flex items-center justify-center text-gold text-2xl font-display tracking-[0.25em]">
-              Masaż
-            </div>
-          </div>
-          <div className="space-y-5 text-muted-foreground leading-relaxed">
-            <p>
-              <strong className="text-foreground">Masaż klasyczny</strong> pomaga rozluźnić mięśnie,
-              zmniejszyć napięcie i poprawić samopoczucie. To doskonały wybór na regenerację po
-              codziennym wysiłku oraz jako forma relaksu i odprężenia.
-            </p>
-            <p>
-              <strong className="text-foreground">Masaż sportowy</strong> jest przeznaczony dla osób
-              aktywnych fizycznie. Skupia się na głębszym rozluźnieniu mięśni, wspomaga regenerację,
-              redukuje zmęczenie i szybsze powroty do treningu po obciążeniu.
-            </p>
-            <p className="font-medium text-foreground">Dostępne ceny:</p>
-            <ul className="space-y-2">
-              {[
-                "Masaż klasyczny — 60 zł / 30 min",
-                "Masaż klasyczny — 90 zł / 60 min",
-                "Masaż sportowy — 60 zł / 30 min",
-                "Masaż sportowy — 90 zł / 60 min",
-              ].map((t) => (
-                <li key={t} className="flex items-start gap-3">
-                  <CheckCircle2 className="h-5 w-5 text-gold shrink-0 mt-0.5" />
-                  <span className="text-sm">{t}</span>
-                </li>
-              ))}
-            </ul>
-          </div>
-        </div>
-      </Section>
 
       {/* PRESOTERAPIA */}
       <Section eyebrow="Presoterapia" title="Drenaż limfatyczny — odciążenie ciała">
@@ -492,6 +387,74 @@ function InneUslugi() {
               </div>
             </div>
           </div>
+        </div>
+      </Section>
+
+      {/* MASAŻE */}
+      <Section eyebrow="Masaże" title="Masaż klasyczny">
+        <div className="grid lg:grid-cols-2 gap-12 items-start">
+          <div className="space-y-5 text-muted-foreground leading-relaxed">
+            <p>
+              <strong className="text-foreground">Masaż klasyczny</strong> pomaga rozluźnić napięte
+              mięśnie, poprawić krążenie i wprowadzić uczucie głębokiego relaksu. To doskonały wybór
+              na regenerację po stresie i codziennym wysiłku.
+            </p>
+          </div>
+          <div className="rounded-2xl overflow-hidden">
+            <img
+              src={presoImg}
+              alt="Masaż klasyczny"
+              loading="lazy"
+              className="w-full h-full object-cover"
+            />
+          </div>
+        </div>
+        <div className="mt-8 max-w-2xl rounded-2xl border border-border bg-card p-5">
+          <div className="text-xs uppercase tracking-[0.3em] text-gold mb-3">Cennik</div>
+          <ul className="space-y-2 text-sm">
+            <li className="flex items-center justify-between gap-4 border-b border-border/60 pb-2">
+              <span>Pół godziny</span>
+              <span className="font-medium text-foreground">70 zł</span>
+            </li>
+            <li className="flex items-center justify-between gap-4">
+              <span>Godzina</span>
+              <span className="font-medium text-foreground">100 zł</span>
+            </li>
+          </ul>
+        </div>
+      </Section>
+
+      <Section eyebrow="Masaże" title="Masaż tkanek głębokich">
+        <div className="grid lg:grid-cols-2 gap-12 items-start">
+          <div className="space-y-5 text-muted-foreground leading-relaxed">
+            <p>
+              <strong className="text-foreground">Masaż tkanek głębokich</strong> skupia się na
+              głębszych warstwach mięśni i napięciach, wspierając regenerację, redukcję bólu oraz
+              poprawę mobilności. Działa szczególnie dobrze przy przeciążeniach, sztywności i
+              przewlekłym napięciu.
+            </p>
+          </div>
+          <div className="rounded-2xl overflow-hidden">
+            <img
+              src={rf}
+              alt="Masaż tkanek głębokich"
+              loading="lazy"
+              className="w-full h-full object-cover"
+            />
+          </div>
+        </div>
+        <div className="mt-8 max-w-2xl rounded-2xl border border-border bg-card p-5">
+          <div className="text-xs uppercase tracking-[0.3em] text-gold mb-3">Cennik</div>
+          <ul className="space-y-2 text-sm">
+            <li className="flex items-center justify-between gap-4 border-b border-border/60 pb-2">
+              <span>Pół godziny</span>
+              <span className="font-medium text-foreground">70 zł</span>
+            </li>
+            <li className="flex items-center justify-between gap-4">
+              <span>Godzina</span>
+              <span className="font-medium text-foreground">100 zł</span>
+            </li>
+          </ul>
         </div>
       </Section>
 

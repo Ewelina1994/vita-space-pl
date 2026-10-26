@@ -236,52 +236,25 @@ function Cennik() {
 
       {/* MASAŻE */}
       <Section eyebrow="Masaże" title="Masaż klasyczny">
-        <div className="rounded-2xl border border-border bg-card p-8 max-w-3xl">
+        <div className="rounded-2xl border border-border bg-card p-6 max-w-3xl">
           <p className="text-sm text-muted-foreground mb-2">
             Relaks, rozluźnienie mięśni i poprawa samopoczucia.
           </p>
-          <div className="mt-4">
-            <PriceRow name="Pół godziny" price="60" />
-            <PriceRow name="Godzina" price="90" />
+          <div className="mt-3">
+            <PriceRow name="Pół godziny" price="70" />
+            <PriceRow name="Godzina" price="100" />
           </div>
         </div>
       </Section>
 
       <Section eyebrow="Masaże" title="Masaż tkanek głębokich">
-        <div className="rounded-2xl border border-border bg-card p-8 max-w-3xl">
+        <div className="rounded-2xl border border-border bg-card p-6 max-w-3xl">
           <p className="text-sm text-muted-foreground mb-2">
             Głębsza praca z mięśniami i napięciami, wspierająca regenerację i mobilność.
           </p>
-          <div className="mt-4">
-            <PriceRow name="Pół godziny" price="60" />
-            <PriceRow name="Godzina" price="90" />
-          </div>
-        </div>
-      </Section>
-
-      {/* MASAŻE */}
-      <Section eyebrow="Masaże" title="Masaż klasyczny i sportowy">
-        <div className="grid lg:grid-cols-2 gap-6">
-          <div className="rounded-2xl border border-border bg-card p-8">
-            <h3 className="text-2xl mb-2">Masaż klasyczny</h3>
-            <p className="text-sm text-muted-foreground mb-2">
-              Relaks i regeneracja dla ciała i umysłu.
-            </p>
-            <div className="mt-4">
-              <PriceRow name="Pół godziny" price="60" />
-              <PriceRow name="Godzina" price="90" />
-            </div>
-          </div>
-
-          <div className="rounded-2xl border border-border bg-card p-8">
-            <h3 className="text-2xl mb-2">Masaż sportowy</h3>
-            <p className="text-sm text-muted-foreground mb-2">
-              Odpowiednio dobrany do wysiłku i regeneracji mięśni.
-            </p>
-            <div className="mt-4">
-              <PriceRow name="Pół godziny" price="60" />
-              <PriceRow name="Godzina" price="90" />
-            </div>
+          <div className="mt-3">
+            <PriceRow name="Pół godziny" price="70" />
+            <PriceRow name="Godzina" price="100" />
           </div>
         </div>
       </Section>

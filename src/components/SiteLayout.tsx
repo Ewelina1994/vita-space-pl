@@ -1,6 +1,6 @@
 import { Link } from "@tanstack/react-router";
-import { Phone, Menu, X, MapPin, Mail, Download } from "lucide-react";
-import { useState, type ReactNode } from "react";
+import { Mail, MapPin, Menu, Phone, X } from "lucide-react";
+import { type CSSProperties, type ReactNode, useState } from "react";
 import { cn } from "@/lib/utils";
 import plakatPKlobut from "@/assets/plakat_p_klobut.jpg";
 
@@ -24,8 +24,12 @@ export function SiteLayout({ children }: { children: ReactNode }) {
               <span className="font-display text-gold text-xl">V</span>
             </div>
             <div className="leading-tight">
-              <div className="font-display text-xl tracking-wide">Vita <span className="gold-text">Space</span></div>
-              <div className="text-[10px] uppercase tracking-[0.25em] text-muted-foreground">EMS · Personal Studio</div>
+              <div className="font-display text-xl tracking-wide">
+                Vita <span className="gold-text">Space</span>
+              </div>
+              <div className="text-[10px] uppercase tracking-[0.25em] text-muted-foreground">
+                EMS · Personal Studio
+              </div>
             </div>
           </Link>
           <nav className="hidden lg:flex items-center gap-8">
@@ -47,7 +51,11 @@ export function SiteLayout({ children }: { children: ReactNode }) {
           >
             <Phone className="h-4 w-4" /> 695 867 080
           </a>
-          <button className="lg:hidden text-foreground" onClick={() => setOpen(!open)} aria-label="Menu">
+          <button
+            className="lg:hidden text-foreground"
+            onClick={() => setOpen(!open)}
+            aria-label="Menu"
+          >
             {open ? <X /> : <Menu />}
           </button>
         </div>
@@ -79,7 +87,9 @@ export function SiteLayout({ children }: { children: ReactNode }) {
       <footer className="border-t border-border/60 bg-navy-deep/60 mt-24">
         <div className="max-w-7xl mx-auto px-6 py-16 grid gap-10 md:grid-cols-5">
           <div>
-            <div className="font-display text-2xl">Vita <span className="gold-text">Space</span></div>
+            <div className="font-display text-2xl">
+              Vita <span className="gold-text">Space</span>
+            </div>
             <p className="mt-4 text-sm text-muted-foreground leading-relaxed">
               Studio treningów EMS, personalnych oraz zabiegów modelujących sylwetkę.
             </p>
@@ -88,16 +98,26 @@ export function SiteLayout({ children }: { children: ReactNode }) {
             <h4 className="text-sm uppercase tracking-widest text-gold mb-4">Nawigacja</h4>
             <ul className="space-y-2 text-sm text-muted-foreground">
               {nav.map((n) => (
-                <li key={n.to}><Link to={n.to} className="hover:text-gold">{n.label}</Link></li>
+                <li key={n.to}>
+                  <Link to={n.to} className="hover:text-gold">
+                    {n.label}
+                  </Link>
+                </li>
               ))}
             </ul>
           </div>
           <div>
             <h4 className="text-sm uppercase tracking-widest text-gold mb-4">Kontakt</h4>
             <ul className="space-y-3 text-sm text-muted-foreground">
-              <li className="flex items-center gap-2"><Phone className="h-4 w-4 text-gold" /> 695 867 080</li>
-              <li className="flex items-center gap-2"><Mail className="h-4 w-4 text-gold" /> vitaspace.kontakt@gmail.com</li>
-              <li className="flex items-start gap-2"><MapPin className="h-4 w-4 text-gold mt-0.5" /> Wieruszów, ul. Wrocławska 12/1</li>
+              <li className="flex items-center gap-2">
+                <Phone className="h-4 w-4 text-gold" /> 695 867 080
+              </li>
+              <li className="flex items-center gap-2">
+                <Mail className="h-4 w-4 text-gold" /> vitaspace.kontakt@gmail.com
+              </li>
+              <li className="flex items-start gap-2">
+                <MapPin className="h-4 w-4 text-gold mt-0.5" /> Wieruszów, ul. Wrocławska 12/1
+              </li>
             </ul>
           </div>
           <div>
@@ -110,11 +130,7 @@ export function SiteLayout({ children }: { children: ReactNode }) {
           </div>
           <div>
             <h4 className="text-sm uppercase tracking-widest text-gold mb-4">Materiały</h4>
-            <a
-              href={plakatPKlobut}
-              download
-              className="block"
-            >
+            <a href={plakatPKlobut} download className="block">
               <img
                 src={plakatPKlobut}
                 alt="Plakat P. Kłobut"
@@ -143,20 +159,29 @@ export function Section({
   subtitle,
   children,
   className = "",
+  style,
 }: {
   eyebrow?: string;
   title?: string;
   subtitle?: string;
   children?: ReactNode;
   className?: string;
+  style?: CSSProperties;
 }) {
   return (
-    <section className={`max-w-7xl mx-auto px-6 py-20 md:py-28 ${className}`}>
+    <section
+      className={`max-w-7xl mx-auto px-6 py-20 md:py-20 ${className}`}
+      style={{ ...style, marginTop: 80, marginBottom: 80 }}
+    >
       {(eyebrow || title || subtitle) && (
         <div className="max-w-3xl mb-14">
-          {eyebrow && <div className="text-xs uppercase tracking-[0.35em] text-gold mb-4">{eyebrow}</div>}
+          {eyebrow && (
+            <div className="text-xs uppercase tracking-[0.35em] text-gold mb-4">{eyebrow}</div>
+          )}
           {title && <h2 className="text-4xl md:text-5xl leading-tight">{title}</h2>}
-          {subtitle && <p className="mt-5 text-muted-foreground leading-relaxed text-lg">{subtitle}</p>}
+          {subtitle && (
+            <p className="mt-5 text-muted-foreground leading-relaxed text-lg">{subtitle}</p>
+          )}
         </div>
       )}
       {children}
@@ -183,7 +208,9 @@ export function PageHero({
         <img src={image} alt="" className="w-full h-full object-cover" />
         <div className="absolute inset-0 bg-gradient-to-t from-background via-background/85 to-background/50" />
       </div>
-      <div className={cn("relative max-w-7xl mx-auto px-6 py-24 md:py-32 w-full", contentClassName)}>
+      <div
+        className={cn("relative max-w-7xl mx-auto px-6 py-24 md:py-32 w-full", contentClassName)}
+      >
         <div className="text-xs uppercase tracking-[0.35em] text-gold mb-4">{eyebrow}</div>
         <h1 className="text-5xl md:text-7xl leading-[1.05] max-w-4xl">{title}</h1>
         {subtitle && <p className="mt-6 max-w-2xl text-lg text-muted-foreground">{subtitle}</p>}
