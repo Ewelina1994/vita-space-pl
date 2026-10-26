@@ -90,6 +90,19 @@ function Cennik() {
         contentClassName="py-16 md:py-10"
       />
 
+      <section className="max-w-7xl mx-auto px-6 pt-8 md:pt-12">
+        <div className="rounded-2xl border border-gold/50 bg-gradient-to-r from-gold/20 via-gold/10 to-transparent p-6 md:p-8 shadow-[0_0_35px_rgba(219,167,87,0.12)]">
+          <div className="text-[11px] uppercase tracking-[0.38em] text-gold">Promocja otwarcia</div>
+          <p className="mt-3 text-2xl md:text-4xl font-semibold leading-tight text-foreground">
+            1 trening lub zabieg -50% <span className="text-muted-foreground">oraz</span> pakiety
+            -20%
+          </p>
+          <p className="mt-2 text-base md:text-lg text-muted-foreground">
+            Promocja obowiązuje przez 1 miesiąc od otwarcia studia, do 24.11.2026.
+          </p>
+        </div>
+      </section>
+
       {/* EMS INDYWIDUALNY */}
       <Section eyebrow="Trening EMS 1:1" title="EMS indywidualny">
         <PackageGrid
