@@ -12,13 +12,13 @@ export const Route = createFileRoute("/kontakt")({
       {
         name: "description",
         content:
-          "Skontaktuj się z Vita Space. Telefon: 695 867 080. Formularz kontaktowy, mapa i dane studia EMS.",
+          "Skontaktuj się z Vita Space. Telefon: 691 186 659. Formularz kontaktowy, mapa i dane studia EMS.",
       },
       { property: "og:title", content: "Kontakt — Vita Space" },
       {
         property: "og:description",
         content:
-          "Skontaktuj się z Vita Space. Telefon: 695 867 080. Formularz kontaktowy, mapa i dane studia EMS.",
+          "Skontaktuj się z Vita Space. Telefon: 691 186 659. Formularz kontaktowy, mapa i dane studia EMS.",
       },
       { property: "og:url", content: buildCanonicalUrl("/kontakt") },
       { property: "og:image", content: absoluteAssetUrl(studio) },
@@ -86,7 +86,7 @@ function Kontakt() {
       {/* Call to phone */}
       <section className="max-w-7xl mx-auto px-6 -mt-4 md:-mt-8 relative z-10">
         <a
-          href="tel:+48695867080"
+          href="tel:+48691186659"
           className="group flex items-center justify-between gap-6 rounded-2xl border border-gold/50 bg-gradient-to-r from-navy to-navy-deep p-6 md:p-8 hover:border-gold transition"
         >
           <div className="flex items-center gap-5">
@@ -95,7 +95,7 @@ function Kontakt() {
             </div>
             <div>
               <div className="text-xs uppercase tracking-[0.3em] text-gold">Zadzwoń teraz</div>
-              <div className="font-display text-3xl md:text-4xl mt-1">695 867 080</div>
+              <div className="font-display text-3xl md:text-4xl mt-1">691 186 659</div>
             </div>
           </div>
           <div className="hidden md:block text-sm text-muted-foreground group-hover:text-gold transition">
@@ -130,8 +130,6 @@ function Kontakt() {
                 <option>Trening personalny</option>
                 <option>Trening w parach</option>
                 <option>Presoterapia</option>
-                <option>Body Shaping</option>
-                <option>Endermologia LPG</option>
                 <option>Inne / konsultacja</option>
               </select>
             </div>
@@ -169,7 +167,7 @@ function Kontakt() {
 
         {/* Dane kontaktowe */}
         <div className="space-y-6">
-          <ContactCard icon={Phone} title="Telefon" value="695 867 080" href="tel:+48695867080" />
+          <ContactCard icon={Phone} title="Telefon" value="691 186 659" href="tel:+48691186659" />
           <ContactCard
             icon={Mail}
             title="E-mail"

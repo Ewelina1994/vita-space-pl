@@ -15,13 +15,13 @@ export const Route = createFileRoute("/")({
       {
         name: "description",
         content:
-          "Vita Space studio EMS, treningów personalnych, presoterapii i modelowania sylwetki. Efekty w krótszym czasie.",
+          "Vita Space studio EMS, treningów personalnych i presoterapii. Efekty w krótszym czasie.",
       },
       { property: "og:title", content: "Vita Space — Studio EMS & Trening Personalny" },
       {
         property: "og:description",
         content:
-          "Vita Space to studio EMS, treningów personalnych, presoterapii i modelowania sylwetki. Efekty w krótszym czasie.",
+          "Vita Space to studio EMS, treningów personalnych i presoterapii. Efekty w krótszym czasie.",
       },
       { property: "og:url", content: buildCanonicalUrl("/") },
       { property: "og:image", content: absoluteAssetUrl(heroEms) },
@@ -57,9 +57,9 @@ function Index() {
               <span className="gold-text">Nasze wsparcie.</span>
             </h1>
             <p className="mt-8 text-lg text-muted-foreground max-w-xl leading-relaxed">
-              Vita Space to kameralne studio oferujące treningi EMS, treningi personalne oraz
-              zabiegi modelujące sylwetkę. Stawiamy na profesjonalne podejście, nowoczesny sprzęt i
-              atmosferę, w której każdy czuje się swobodnie.
+              Vita Space to kameralne studio oferujące treningi EMS i treningi personalne.
+              Stawiamy na profesjonalne podejście, nowoczesny sprzęt i atmosferę, w której każdy
+              czuje się swobodnie.
             </p>
             <div className="mt-10 flex flex-wrap gap-4">
               <Link
@@ -134,12 +134,6 @@ function Index() {
               desc: "Drenaż limfatyczny — redukcja obrzęków, cellulitu i regeneracja po wysiłku.",
               to: "/inne-uslugi",
             },
-            {
-              img: rf,
-              title: "Body Shaping",
-              desc: "Zabiegi modelujące sylwetkę — redukcja tkanki tłuszczowej i ujędrnianie skóry.",
-              to: "/inne-uslugi",
-            },
           ].map((s) => (
             <Link
               key={s.title}
@@ -191,7 +185,7 @@ function Index() {
                 {
                   i: Zap,
                   t: "Nowoczesne technologie",
-                  d: "Sprzęt EMS najwyższej klasy oraz certyfikowane urządzenia do presoterapii i modelowania sylwetki.",
+                  d: "Sprzęt EMS najwyższej klasy oraz certyfikowane urządzenia do presoterapii i regeneracji ciała.",
                 },
                 {
                   i: Users,
@@ -201,7 +195,7 @@ function Index() {
                 {
                   i: Sparkles,
                   t: "Widoczne efekty",
-                  d: "Program dostosowany do celu — redukcja, wzmocnienie, modelowanie, rehabilitacja.",
+                  d: "Program dostosowany do celu — redukcja, wzmocnienie, rehabilitacja.",
                 },
                 {
                   i: Heart,
@@ -260,10 +254,10 @@ function Index() {
             </p>
             <div className="mt-10 flex flex-wrap justify-center gap-4">
               <a
-                href="tel:+48695867080"
+                href="tel:+48691186659"
                 className="inline-flex items-center gap-2 rounded-full bg-gold px-8 py-4 text-sm font-medium text-primary-foreground hover:opacity-90"
               >
-                <Phone className="h-4 w-4" /> 695 867 080
+                <Phone className="h-4 w-4" /> 691 186 659
               </a>
               <Link
                 to="/kontakt"

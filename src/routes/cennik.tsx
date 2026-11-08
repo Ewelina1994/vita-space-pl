@@ -11,13 +11,13 @@ export const Route = createFileRoute("/cennik")({
       {
         name: "description",
         content:
-          "Cennik Vita Space: pakiety treningów EMS (1/8/16/24), EMS w parach, trening personalny, presoterapia i body shaping.",
+          "Cennik Vita Space: pakiety treningów EMS (1/8/16/24), EMS w parach, trening personalny i presoterapia.",
       },
       { property: "og:title", content: "Cennik — Vita Space" },
       {
         property: "og:description",
         content:
-          "Cennik Vita Space: pakiety treningów EMS, EMS w parach, trening personalny, presoterapia i body shaping.",
+          "Cennik Vita Space: pakiety treningów EMS, EMS w parach, trening personalny i presoterapia.",
       },
       { property: "og:url", content: buildCanonicalUrl("/cennik") },
       { property: "og:image", content: absoluteAssetUrl(studio) },
@@ -328,49 +328,6 @@ function Cennik() {
         </div>
       </section>
 
-      {/* BODY SHAPING */}
-      <Section eyebrow="Body Shaping" title="Zabiegi modelujące sylwetkę">
-        <div className="grid lg:grid-cols-2 gap-6">
-          <div className="rounded-2xl border border-border bg-card p-8">
-            <h3 className="text-xl mb-4">Body Shaping</h3>
-            <PriceRow name="1 zabieg" price="80" note="czas zabiegu: 30 min" />
-            <PriceRow name="5 zabiegów" price="350" />
-            <PriceRow name="10 zabiegów" price="650" />
-          </div>
-
-          <div className="rounded-2xl border border-border bg-card p-8">
-            <h3 className="text-xl mb-4">Lipolaser</h3>
-            <PriceRow name="1 zabieg" price="70" note="czas zabiegu: 35 min" />
-            <PriceRow name="5 zabiegów" price="250" />
-            <PriceRow name="10 zabiegów" price="450" />
-          </div>
-
-          <div className="rounded-2xl border border-border bg-card p-8">
-            <h3 className="text-xl mb-4">RF — Fale radiowe</h3>
-            <PriceRow
-              name="1 zabieg"
-              price="80"
-              note="czas trwania: 1 partia 15–30 min, możliwość łączenia partii; zabieg 45 min"
-            />
-            <PriceRow name="5 zabiegów" price="360" note="72 zł / zabieg" />
-            <PriceRow name="10 zabiegów" price="720" note="72 zł / zabieg" />
-          </div>
-
-          <div className="rounded-2xl border border-border bg-card p-8">
-            <h3 className="text-xl mb-4">Liposukcja kawitacyjna</h3>
-            <PriceRow name="1 zabieg" price="80" note="czas zabiegu: 30 min" />
-            <PriceRow name="5 zabiegów" price="360" note="72 zł / zabieg" />
-            <PriceRow name="10 zabiegów" price="720" note="72 zł / zabieg" />
-          </div>
-
-          <div className="rounded-2xl border border-border bg-card p-8">
-            <h3 className="text-xl mb-4">Endermologia LPG</h3>
-            <PriceRow name="1 zabieg" price="120" note="czas zabiegu: 30–40 min" />
-            <PriceRow name="5 zabiegów" price="550" note="110 zł / zabieg" />
-            <PriceRow name="10 zabiegów" price="1 000" note="100 zł / zabieg" />
-          </div>
-        </div>
-      </Section>
 
       <section className="max-w-7xl mx-auto px-6 pb-24">
         <div className="rounded-3xl border border-gold/40 bg-gradient-to-br from-navy to-navy-deep p-12 text-center">
@@ -380,10 +337,10 @@ function Cennik() {
           </p>
           <div className="mt-8 flex flex-wrap justify-center gap-4">
             <a
-              href="tel:+48695867080"
+              href="tel:+48691186659"
               className="inline-flex items-center gap-2 rounded-full bg-gold px-8 py-3.5 text-sm font-medium text-primary-foreground"
             >
-              Zadzwoń 695 867 080
+              Zadzwoń 691 186 659
             </a>
             <Link
               to="/kontakt"

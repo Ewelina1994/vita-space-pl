@@ -46,10 +46,10 @@ export function SiteLayout({ children }: { children: ReactNode }) {
             ))}
           </nav>
           <a
-            href="tel:+48695867080"
+            href="tel:+48691186659"
             className="hidden md:inline-flex items-center gap-2 rounded-full border border-gold/70 px-5 py-2.5 text-sm text-gold hover:bg-gold hover:text-primary-foreground transition-colors"
           >
-            <Phone className="h-4 w-4" /> 695 867 080
+            <Phone className="h-4 w-4" /> 691 186 659
           </a>
           <button
             className="lg:hidden text-foreground"
@@ -74,8 +74,8 @@ export function SiteLayout({ children }: { children: ReactNode }) {
                   {n.label}
                 </Link>
               ))}
-              <a href="tel:+48695867080" className="inline-flex items-center gap-2 text-gold pt-2">
-                <Phone className="h-4 w-4" /> 695 867 080
+              <a href="tel:+48691186659" className="inline-flex items-center gap-2 text-gold pt-2">
+                <Phone className="h-4 w-4" /> 691 186 659
               </a>
             </div>
           </div>
@@ -91,7 +91,7 @@ export function SiteLayout({ children }: { children: ReactNode }) {
               Vita <span className="gold-text">Space</span>
             </div>
             <p className="mt-4 text-sm text-muted-foreground leading-relaxed">
-              Studio treningów EMS, personalnych oraz zabiegów modelujących sylwetkę.
+              Studio treningów EMS i treningów personalnych.
             </p>
           </div>
           <div>
@@ -110,7 +110,7 @@ export function SiteLayout({ children }: { children: ReactNode }) {
             <h4 className="text-sm uppercase tracking-widest text-gold mb-4">Kontakt</h4>
             <ul className="space-y-3 text-sm text-muted-foreground">
               <li className="flex items-center gap-2">
-                <Phone className="h-4 w-4 text-gold" /> 695 867 080
+                <Phone className="h-4 w-4 text-gold" /> 691 186 659
               </li>
               <li className="flex items-center gap-2">
                 <Mail className="h-4 w-4 text-gold" /> vitaspace.kontakt@gmail.com
@@ -128,21 +128,11 @@ export function SiteLayout({ children }: { children: ReactNode }) {
               <li>Niedziela: nieczynne</li>
             </ul>
           </div>
-          <div>
-            <h4 className="text-sm uppercase tracking-widest text-gold mb-4">Materiały</h4>
-            <a href={plakatPKlobut} download className="block">
-              <img
-                src={plakatPKlobut}
-                alt="Plakat P. Kłobut"
-                className="rounded border border-gold/40 hover:border-gold/70 transition-colors max-w-[200px] h-auto"
-              />
-            </a>
-          </div>
         </div>
         <div className="border-t border-border/40">
           <div className="max-w-7xl mx-auto px-6 py-6 text-xs text-muted-foreground flex flex-col md:flex-row justify-between gap-4 items-start md:items-center">
             <span>© {new Date().getFullYear()} Vita Space. Wszystkie prawa zastrzeżone.</span>
-            <span>Studio EMS · Trening Personalny · Modelowanie sylwetki</span>
+            <span>Studio EMS · Trening Personalny</span>
             <Link to="/polityka-prywatnosci" className="hover:text-gold transition">
               Polityka Prywatności
             </Link>

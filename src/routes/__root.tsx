@@ -20,7 +20,7 @@ const localBusinessSchema = {
   name: "Vita Space",
   url: SITE_URL,
   image: absoluteAssetUrl(designerIcon),
-  telephone: "+48 695 867 080",
+  telephone: "+48 691 186 659",
   email: "vitaspace.kontakt@gmail.com",
   address: {
     "@type": "PostalAddress",
@@ -111,16 +111,16 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Vita Space — Studio EMS, trening personalny i modelowanie sylwetki" },
+      { title: "Vita Space — Studio EMS i trening personalny" },
       {
         name: "description",
         content:
-          "Vita Space — studio treningów EMS, treningów personalnych, presoterapii oraz zabiegów body shaping. Umów wizytę: 695 867 080.",
+          "Vita Space — studio treningów EMS i treningów personalnych. Umów wizytę: 691 186 659.",
       },
       { property: "og:title", content: "Vita Space — Studio EMS i trening personalny" },
       {
         property: "og:description",
-        content: "Studio EMS, trening personalny, presoterapia i modelowanie sylwetki.",
+        content: "Studio EMS i trening personalny.",
       },
       { property: "og:type", content: "website" },
       { property: "og:site_name", content: "Vita Space" },
