@@ -132,6 +132,12 @@ function Cennik() {
               perSession: "95 zł / sesja",
             },
             {
+              name: "Pakiet 12 treningów",
+              sessions: "12 treningów",
+              price: "1 110",
+              perSession: "92,50 zł / sesja",
+            },
+            {
               name: "Pakiet Regular",
               sessions: "16 treningów",
               price: "1 440",
@@ -185,6 +191,12 @@ function Cennik() {
                 sessions: "8 treningów",
                 price: "680",
                 perSession: "85 zł / osoba",
+              },
+              {
+                name: "Pakiet 12 treningów",
+                sessions: "12 treningów",
+                price: "990",
+                perSession: "82,5 zł / osoba",
               },
               {
                 name: "Pakiet Regular",
@@ -255,6 +267,17 @@ function Cennik() {
           <div className="mt-3">
             <PriceRow name="Pół godziny" price="70" />
             <PriceRow name="Godzina" price="100" />
+          </div>
+        </div>
+      </Section>
+
+      <Section eyebrow="Masaże" title="Masaż Kobido">
+        <div className="rounded-2xl border border-border bg-card p-6 max-w-3xl">
+          <p className="text-sm text-muted-foreground mb-2">
+            Masaż twarzy, szyi i dekoltu z drenażem i tapingiem twarzy.
+          </p>
+          <div className="mt-3">
+            <PriceRow name="Masaż Kobido" price="160" note="czas trwania: 1,5 godziny" />
           </div>
         </div>
       </Section>

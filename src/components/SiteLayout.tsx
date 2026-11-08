@@ -169,10 +169,7 @@ export function Section({
   style?: CSSProperties;
 }) {
   return (
-    <section
-      className={`max-w-7xl mx-auto px-6 py-20 md:py-20 ${className}`}
-      style={{ ...style, marginTop: 80, marginBottom: 80 }}
-    >
+    <section className={`max-w-7xl mx-auto px-6 py-20 md:py-20 ${className}`} style={style}>
       {(eyebrow || title || subtitle) && (
         <div className="max-w-3xl mb-14">
           {eyebrow && (
