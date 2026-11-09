@@ -3,9 +3,9 @@ import { ArrowRight, CheckCircle2, Heart, Phone, Sparkles, Users, Zap } from "lu
 import { Section, SiteLayout } from "@/components/SiteLayout";
 import heroEms from "@/assets/hero-ems.jpg";
 import studio from "@/assets/studio.jpg";
-import presoImg from "@/assets/presoterapia.png";
-import rf from "@/assets/rf.png";
-import personalImg from "@/assets/personal.png";
+import treningEmsImg from "@/assets/trening-ems.jpeg";
+import treningPersonalnyImg from "@/assets/trening-personalny.jpeg";
+import presoterapiaImg from "@/assets/presoterapia2.jpeg";
 import { absoluteAssetUrl, buildCanonicalUrl, canonicalLink } from "@/lib/seo";
 
 export const Route = createFileRoute("/")({
@@ -117,19 +117,19 @@ function Index() {
         <div className="grid md:grid-cols-2 gap-6">
           {[
             {
-              img: heroEms,
+              img: treningEmsImg,
               title: "Trening EMS",
               desc: "Elektrostymulacja mięśni — 25 minut treningu z efektem kilkugodzinnego siłowego.",
               to: "/trening-ems",
             },
             {
-              img: personalImg,
+              img: treningPersonalnyImg,
               title: "Trening personalny",
               desc: "Indywidualne treningi 1:1 lub w parach z certyfikowanym trenerem.",
               to: "/trening-personalny",
             },
             {
-              img: presoImg,
+              img: presoterapiaImg,
               title: "Presoterapia",
               desc: "Drenaż limfatyczny — redukcja obrzęków, cellulitu i regeneracja po wysiłku.",
               to: "/inne-uslugi",

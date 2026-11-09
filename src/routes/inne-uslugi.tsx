@@ -97,67 +97,6 @@ function InneUslugi() {
         </div>
       </Section>
 
-      {/* FALA UDERZENIOWA */}
-      <Section
-        eyebrow="Fala Uderzeniowa"
-        title="Fala uderzeniowa – regeneracja, zdrowie i poprawa kondycji skóry"
-      >
-        <div className="grid lg:grid-cols-2 gap-12 items-start">
-          <div className="rounded-2xl overflow-hidden border border-border bg-card max-w-[520px] mx-auto w-full order-2 lg:order-1">
-            <img
-              src={rf}
-              alt="Fala uderzeniowa"
-              loading="lazy"
-              className="w-full h-[420px] object-cover object-center"
-            />
-          </div>
-          <div className="space-y-5 text-muted-foreground leading-relaxed order-1 lg:order-2">
-            <p>
-              <strong className="text-foreground">Fala uderzeniowa</strong> to nowoczesna,
-              nieinwazyjna terapia wykorzystująca impulsy akustyczne do pobudzenia naturalnych
-              procesów regeneracyjnych organizmu. Technologia ta od lat stosowana jest w
-              fizjoterapii i rehabilitacji, a jej działanie wspiera również poprawę kondycji skóry i
-              redukcję objawów zmęczenia tkanek.
-            </p>
-            <div>
-              <p className="font-medium text-foreground mb-3">Korzyści zdrowotne:</p>
-              <ul className="space-y-2">
-                {[
-                  "Łagodzi napięcia mięśniowe i dolegliwości bólowe",
-                  "Poprawia ukrwienie oraz dotlenienie tkanek",
-                  "Wspomaga regenerację mięśni i ścięgien",
-                  "Przyspiesza procesy naprawcze organizmu",
-                  "Wspiera metabolizm komórkowy",
-                  "Pomaga zmniejszyć obrzęki i zastoje limfatyczne",
-                  "Poprawia ruchomość oraz komfort funkcjonowania tkanek",
-                ].map((t) => (
-                  <li key={t} className="flex items-start gap-3">
-                    <CheckCircle2 className="h-5 w-5 text-gold shrink-0 mt-0.5" />
-                    <span className="text-sm">{t}</span>
-                  </li>
-                ))}
-              </ul>
-            </div>
-            <div>
-              <p className="font-medium text-foreground mb-3">Korzyści estetyczne:</p>
-              <ul className="space-y-2">
-                {[
-                  "Redukuje widoczność cellulitu",
-                  "Wygładza i ujędrnia skórę",
-                  "Pobudza produkcję kolagenu i elastyny",
-                  "Poprawia napięcie oraz elastyczność skóry",
-                  "Zwiększa ogólną jakość skóry i jej wygląd",
-                ].map((t) => (
-                  <li key={t} className="flex items-start gap-3">
-                    <CheckCircle2 className="h-5 w-5 text-gold shrink-0 mt-0.5" />
-                    <span className="text-sm">{t}</span>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          </div>
-        </div>
-      </Section>
       {/*link*/}
       <section>
         <div className="max-w-7xl mx-auto px-6 py-20 md:py-28">

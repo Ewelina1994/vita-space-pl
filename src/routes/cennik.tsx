@@ -246,42 +246,6 @@ function Cennik() {
         </div>
       </Section>
 
-      {/* MASAŻE */}
-      <Section eyebrow="Masaże" title="Masaż klasyczny">
-        <div className="rounded-2xl border border-border bg-card p-6 max-w-3xl">
-          <p className="text-sm text-muted-foreground mb-2">
-            Relaks, rozluźnienie mięśni i poprawa samopoczucia.
-          </p>
-          <div className="mt-3">
-            <PriceRow name="Pół godziny" price="70" />
-            <PriceRow name="Godzina" price="100" />
-          </div>
-        </div>
-      </Section>
-
-      <Section eyebrow="Masaże" title="Masaż tkanek głębokich">
-        <div className="rounded-2xl border border-border bg-card p-6 max-w-3xl">
-          <p className="text-sm text-muted-foreground mb-2">
-            Głębsza praca z mięśniami i napięciami, wspierająca regenerację i mobilność.
-          </p>
-          <div className="mt-3">
-            <PriceRow name="Pół godziny" price="70" />
-            <PriceRow name="Godzina" price="100" />
-          </div>
-        </div>
-      </Section>
-
-      <Section eyebrow="Masaże" title="Masaż Kobido">
-        <div className="rounded-2xl border border-border bg-card p-6 max-w-3xl">
-          <p className="text-sm text-muted-foreground mb-2">
-            Masaż twarzy, szyi i dekoltu z drenażem i tapingiem twarzy.
-          </p>
-          <div className="mt-3">
-            <PriceRow name="Masaż Kobido" price="160" note="czas trwania: 1,5 godziny" />
-          </div>
-        </div>
-      </Section>
-
       {/* PRESOTERAPIA */}
       <section className="bg-navy-deep/50 border-y border-border/60">
         <div className="max-w-7xl mx-auto px-6 py-20">
