@@ -1,6 +1,6 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { Check, Star } from "lucide-react";
-import { SiteLayout, PageHero, Section } from "@/components/SiteLayout";
+import { PageHero, Section, SiteLayout } from "@/components/SiteLayout";
 import studio from "@/assets/studio.jpg";
 import { absoluteAssetUrl, buildCanonicalUrl, canonicalLink } from "@/lib/seo";
 
@@ -110,8 +110,14 @@ function Cennik() {
             {
               name: "Trening próbny",
               sessions: "1 trening",
-              price: "59",
-              perSession: "59 zł / sesja",
+              price: "49",
+              perSession: "49 zł / sesja",
+            },
+            {
+              name: "Każdy kolejny trening",
+              sessions: "1 trening",
+              price: "120",
+              perSession: "120 zł / sesja",
             },
             {
               name: "Pakiet Start",
@@ -169,47 +175,47 @@ function Cennik() {
           <PackageGrid
             items={[
               {
-                name: "Sesja pojedyncza",
+                name: "Trening próbny",
                 sessions: "1 trening",
-                price: "50",
-                perSession: "50 zł / osoba",
+                price: "49",
+                perSession: "49 zł / osoba",
               },
               {
-                name: "Pakiet Start",
+                name: "Kolejny trening",
+                sessions: "1 trening",
+                price: "100",
+                perSession: "100 zł / osoba",
+              },
+              {
+                name: "Pakiet 4 treningów",
                 sessions: "4 treningi",
-                price: "380",
-                perSession: "95 zł / osoba",
-              },
-              {
-                name: "Pakiet Mini",
-                sessions: "6 treningów",
-                price: "540",
+                price: "360",
                 perSession: "90 zł / osoba",
               },
               {
-                name: "Pakiet Progress",
-                sessions: "8 treningów",
-                price: "680",
+                name: "Pakiet 6 treningów",
+                sessions: "6 treningów",
+                price: "510",
                 perSession: "85 zł / osoba",
               },
               {
-                name: "Pakiet 12 treningów",
-                sessions: "12 treningów",
-                price: "990",
-                perSession: "82,5 zł / osoba",
+                name: "Pakiet 8 treningów",
+                sessions: "8 treningów",
+                price: "640",
+                perSession: "80 zł / osoba",
               },
               {
-                name: "Pakiet Regular",
+                name: "Pakiet 16 treningów",
                 sessions: "16 treningów",
-                price: "1 280",
-                perSession: "80 zł / osoba",
+                price: "1 120",
+                perSession: "70 zł / osoba",
                 featured: true,
               },
               {
-                name: "Pakiet Premium",
+                name: "Pakiet 24 treningi",
                 sessions: "24 treningi",
-                price: "1 800",
-                perSession: "75 zł / osoba",
+                price: "1 440",
+                perSession: "60 zł / osoba",
               },
             ]}
           />
@@ -291,7 +297,6 @@ function Cennik() {
           </div>
         </div>
       </section>
-
 
       <section className="max-w-7xl mx-auto px-6 pb-24">
         <div className="rounded-3xl border border-gold/40 bg-gradient-to-br from-navy to-navy-deep p-12 text-center">
